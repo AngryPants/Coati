@@ -35,6 +35,7 @@ public:
     {
         MK_ASSERT(_duration > 0.0f);
         MK_ASSERT((_loopCount >= 0) || (_loopCount == INFINITE_LOOPS));
+        MK_ASSERT(!((_loopCount == INFINITE_LOOPS) && _destroyOnFinish));
     }
     virtual ~MKSpriteAnimationTicket() {}
 
@@ -42,7 +43,7 @@ public:
     const mkString& GetStateName() const { return m_StateName; }
     mkF32 GetDuration() const { return m_Duration; }
     mkS32 GetLoopCount() const { return m_LoopCount; }
-    mkBool GetDestroyOnFinish() const { return m_DestroyOnFinish; }
+    mkBool GetDestroyOnFinish() const { return m_DestroyOnFinish; } // This only works if the LoopCount is not infinite.
 };
 
 #endif // MK_SPRITE_ANIMATION_TICKET_H

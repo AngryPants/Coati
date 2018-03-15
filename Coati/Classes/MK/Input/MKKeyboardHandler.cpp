@@ -8,7 +8,6 @@
 
 // Include MK
 #include "MKKeyboardHandler.h"
-#include "MKInputManager.h"
 #include "MKInput.h"
 #include "../Common/MKAssertions.h"
 #include "../Common/MKMathsHelper.h"

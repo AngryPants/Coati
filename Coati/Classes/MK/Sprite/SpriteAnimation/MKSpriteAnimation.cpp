@@ -124,26 +124,38 @@ void MKSpriteAnimation::PlayNextTicket()
     cocos2d::Animation* animation = animationState->GetAnimation();
     MK_ASSERT(animation != nullptr);
 
-    // Update the animation parameters.
-    animation->setUnlimitedLoop(ticket->GetLoopCount() == MKSpriteAnimationTicket::INFINITE_LOOPS);
-    animation->setLoops(ticket->GetLoopCount());
-    animation->setDelayPerUnit(ticket->GetDuration() / static_cast<mkF32>(animationState->GetFrameCount()));
-
     // Set the sprite frame.
     setSpriteFrame(SpriteFrameCache::getInstance()->getSpriteFrameByName(animationState->GetFrame(0)));
 
-    // Run the action.
-    Animate* animateAction = Animate::create(animation);
-
-    if (ticket->GetDestroyOnFinish())
+    // Update the animation parameters.
+    animation->setDelayPerUnit(ticket->GetDuration() / static_cast<mkF32>(animationState->GetFrameCount()));
+    if (ticket->GetLoopCount() == MKSpriteAnimationTicket::INFINITE_LOOPS)
     {
-        MKRemoveFromParentAction* removeFromParentAction = MKRemoveFromParentAction::Create();
-        m_CurrentAnimation = Sequence::create(animateAction, removeFromParentAction, nullptr);
+        animation->setLoops(1);
     }
     else
     {
-        CallFunc* callbackAction = CallFunc::create(CC_CALLBACK_0(MKSpriteAnimation::PlayNextTicket, this));
-        m_CurrentAnimation = Sequence::create(animateAction, callbackAction, nullptr);
+        animation->setLoops(ticket->GetLoopCount());
+    }
+
+    // Run the action.
+    if (ticket->GetLoopCount() == MKSpriteAnimationTicket::INFINITE_LOOPS)
+    {
+        m_CurrentAnimation = RepeatForever::create(Animate::create(animation));
+    }
+    else
+    {
+        Animate* animateAction = Animate::create(animation);
+        if (ticket->GetDestroyOnFinish())
+        {
+            MKRemoveFromParentAction* removeFromParentAction = MKRemoveFromParentAction::Create();
+            m_CurrentAnimation = Sequence::create(animateAction, removeFromParentAction, nullptr);
+        }
+        else
+        {
+            CallFunc* callbackAction = CallFunc::create(CC_CALLBACK_0(MKSpriteAnimation::PlayNextTicket, this));
+            m_CurrentAnimation = Sequence::create(animateAction, callbackAction, nullptr);
+        }
     }
 
     m_CurrentAnimation->retain();

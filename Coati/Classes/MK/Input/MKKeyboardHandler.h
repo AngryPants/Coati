@@ -15,6 +15,7 @@
 #include "../Common/MKMacros.h"
 #include "../Common/MKSingletonTemplate.h"
 #include "../Common/MKPasskey.h"
+#include "MKInputManager.h"
 #include "MKInputName.h"
 
 USING_NS_CC;
@@ -24,7 +25,6 @@ using namespace std;
 
 NS_MK_BEGIN
 
-class MKInputManager;
 class MKInputDefinition;
 
 class MKKeyboardHandler : public MKSingletonTemplate<MKKeyboardHandler>

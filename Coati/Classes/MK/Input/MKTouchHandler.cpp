@@ -8,7 +8,6 @@
 
 // Include MK
 #include "MKTouchHandler.h"
-#include "MKInputManager.h"
 #include "../Common/MKAssertions.h"
 #include "../Common/MKMathsHelper.h"
 
