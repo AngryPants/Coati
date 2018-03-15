@@ -1,0 +1,16 @@
+{
+    "Heroes" : [
+        {
+            "Name" : "Default",
+            "Price" : 0,
+            "PList" : "Textures/Gameplay/Player/Default/PList.plist",
+            "JSON" : "Textures/Gameplay/Player/Default/States.json"
+        },
+        {
+            "Name" : "Green",
+            "Price" : 1000,
+            "PList" : "Textures/Gameplay/Player/Green/PList.plist",
+            "JSON" : "Textures/Gameplay/Player/Green/States.json"
+        }
+    ]
+}

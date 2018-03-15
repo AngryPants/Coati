@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AppDelegate">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{9c558ba3-995f-45ef-bcd3-4f68dac21dce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{a5ee9768-5130-4c76-a845-134b934fb304}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK">
+      <UniqueIdentifier>{9c30a1af-f9a7-4471-ac00-a9fa6fdc824e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\Actions">
+      <UniqueIdentifier>{b604d649-aa89-44e3-a955-5adc52a99e2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\Audio">
+      <UniqueIdentifier>{a577e00a-cf75-46ad-bf4c-b73a2962b9af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\Common">
+      <UniqueIdentifier>{49154ca5-dbaa-46e8-b9ce-ec8cf51bca32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\GameData">
+      <UniqueIdentifier>{91a36777-3af3-4693-ae44-c9d14bb81cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\Gameplay">
+      <UniqueIdentifier>{e9ea898a-bb14-4c7c-a4b9-ac2e597c0239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\Input">
+      <UniqueIdentifier>{bf9b47a1-46c7-4c76-8f18-f79d9307d09a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\SceneManagement">
+      <UniqueIdentifier>{95c9617f-d7e7-4765-8b6c-0d9b310af2e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\Shop">
+      <UniqueIdentifier>{efd1278f-8f91-491b-9c59-8d415398f78d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\Sprite">
+      <UniqueIdentifier>{92a286d2-13d0-40a3-8700-7ff3e949f0c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\Sprite\SpriteAnimation">
+      <UniqueIdentifier>{9d9c3839-39d7-47ec-8aa2-f0bfb5582062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MK\UI">
+      <UniqueIdentifier>{3eb83445-b021-4c4a-9b4d-0bd3aec37a7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Background">
+      <UniqueIdentifier>{0d2b40a8-5e6e-41d8-b847-92c01733c1aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameData">
+      <UniqueIdentifier>{0785421d-4f7a-4d19-8e71-c137f1a657eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Obstacles">
+      <UniqueIdentifier>{03e78b7f-ec4c-496a-9420-0d2e962b88f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Player">
+      <UniqueIdentifier>{e57c0da0-30c5-4776-b2d1-192dca66c823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Powerups">
+      <UniqueIdentifier>{5eeeb948-c7d7-45d5-bacf-510a4040ae81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Shop">
+      <UniqueIdentifier>{b0808248-bf12-4d98-8927-18ba020abc78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Spawner">
+      <UniqueIdentifier>{72031494-c240-46bc-88d1-a5a137c33689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes\Shop">
+      <UniqueIdentifier>{1223c3ad-42b7-4689-a91a-fd6d2093dc3d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>AppDelegate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Audio\MKSound.cpp">
+      <Filter>MK\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Audio\MKAudioManager.cpp">
+      <Filter>MK\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Common\MKMathsHelper.cpp">
+      <Filter>MK\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\GameData\MKAudioData.cpp">
+      <Filter>MK\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\GameData\MKAudioVolumeData.cpp">
+      <Filter>MK\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Input\MKInputDefinition.cpp">
+      <Filter>MK\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Input\MKInputManager.cpp">
+      <Filter>MK\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Input\MKKeyboardHandler.cpp">
+      <Filter>MK\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Input\MKTouchHandler.cpp">
+      <Filter>MK\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\SceneManagement\MKSceneManager.cpp">
+      <Filter>MK\SceneManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Sprite\MKSprite.cpp">
+      <Filter>MK\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Sprite\SpriteAnimation\MKSpriteAnimation.cpp">
+      <Filter>MK\Sprite\SpriteAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\Sprite\SpriteAnimation\MKSpriteAnimationState.cpp">
+      <Filter>MK\Sprite\SpriteAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MK\UI\MKUIHelper.cpp">
+      <Filter>MK\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Background\MKBackground.cpp">
+      <Filter>Game\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Background\MKBackgroundLayer.cpp">
+      <Filter>Game\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\GameData\MKBackgroundData.cpp">
+      <Filter>Game\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\GameData\MKHeroData.cpp">
+      <Filter>Game\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\GameData\MKPlayerData.cpp">
+      <Filter>Game\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Obstacles\MKLaser.cpp">
+      <Filter>Game\Obstacles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Obstacles\MKMissile.cpp">
+      <Filter>Game\Obstacles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Obstacles\MKMissileWarning.cpp">
+      <Filter>Game\Obstacles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Obstacles\MKSaw.cpp">
+      <Filter>Game\Obstacles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Obstacles\MKSpike.cpp">
+      <Filter>Game\Obstacles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Player\MKPlayer.cpp">
+      <Filter>Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Powerups\MKShield.cpp">
+      <Filter>Game\Powerups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Spawner\MKSpawner.cpp">
+      <Filter>Game\Spawner</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\StartScreen.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\Game.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\MainMenu.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\MenuTemplate.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\Settings.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\Shop\ShopBackgrounds.cpp">
+      <Filter>Scenes\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\Shop\ShopHeroes.cpp">
+      <Filter>Scenes\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\Shop\ShopMain.cpp">
+      <Filter>Scenes\Shop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\Shop\ShopTemplate.cpp">
+      <Filter>Scenes\Shop</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>AppDelegate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Actions\MKRemoveFromParentAction.h">
+      <Filter>MK\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Actions\MKRepeatActionInstantForever.h">
+      <Filter>MK\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Actions\MKScaleUpAndDownAction.h">
+      <Filter>MK\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Actions\MKFollowNodeAction.h">
+      <Filter>MK\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Actions\MKMoveBySinCurveAction.h">
+      <Filter>MK\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Actions\MKPlaySoundAction.h">
+      <Filter>MK\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Audio\MKSound.h">
+      <Filter>MK\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Audio\MKAudioManager.h">
+      <Filter>MK\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Common\MKAssertions.h">
+      <Filter>MK\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Common\MKEnumMacros.h">
+      <Filter>MK\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Common\MKJSONHelper.h">
+      <Filter>MK\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Common\MKMacros.h">
+      <Filter>MK\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Common\MKMacros2.h">
+      <Filter>MK\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Common\MKMathsHelper.h">
+      <Filter>MK\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Common\MKPasskey.h">
+      <Filter>MK\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Common\MKSingletonTemplate.h">
+      <Filter>MK\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\GameData\MKAudioData.h">
+      <Filter>MK\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\GameData\MKAudioVolumeData.h">
+      <Filter>MK\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\GameData\MKGameData.h">
+      <Filter>MK\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\GameData\MKGameDataLoader.h">
+      <Filter>MK\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Gameplay\MKCollisionCategory.h">
+      <Filter>MK\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Gameplay\MKGameplayMacros.h">
+      <Filter>MK\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Input\MKInput.h">
+      <Filter>MK\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Input\MKInputContext.h">
+      <Filter>MK\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Input\MKInputControllerIndex.h">
+      <Filter>MK\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Input\MKInputDefinition.h">
+      <Filter>MK\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Input\MKInputMacros.h">
+      <Filter>MK\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Input\MKInputManager.h">
+      <Filter>MK\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Input\MKInputName.h">
+      <Filter>MK\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Input\MKKeyboardHandler.h">
+      <Filter>MK\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Input\MKTouchHandler.h">
+      <Filter>MK\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\SceneManagement\MKScene.h">
+      <Filter>MK\SceneManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\SceneManagement\MKSceneManager.h">
+      <Filter>MK\SceneManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Shop\MKShopItem.h">
+      <Filter>MK\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Sprite\MKSprite.h">
+      <Filter>MK\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Sprite\SpriteAnimation\MKSpriteAnimation.h">
+      <Filter>MK\Sprite\SpriteAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Sprite\SpriteAnimation\MKSpriteAnimationState.h">
+      <Filter>MK\Sprite\SpriteAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\Sprite\SpriteAnimation\MKSpriteAnimationTicket.h">
+      <Filter>MK\Sprite\SpriteAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MK\UI\MKUIHelper.h">
+      <Filter>MK\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Background\MKBackground.h">
+      <Filter>Game\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Background\MKBackgroundLayer.h">
+      <Filter>Game\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\GameData\MKBackgroundData.h">
+      <Filter>Game\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\GameData\MKHeroData.h">
+      <Filter>Game\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\GameData\MKPlayerData.h">
+      <Filter>Game\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Obstacles\MKLaser.h">
+      <Filter>Game\Obstacles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Obstacles\MKMissile.h">
+      <Filter>Game\Obstacles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Obstacles\MKMissileWarning.h">
+      <Filter>Game\Obstacles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Obstacles\MKObstacle.h">
+      <Filter>Game\Obstacles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Obstacles\MKSaw.h">
+      <Filter>Game\Obstacles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Obstacles\MKSpike.h">
+      <Filter>Game\Obstacles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Player\MKPlayer.h">
+      <Filter>Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Powerups\MKShield.h">
+      <Filter>Game\Powerups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Powerups\MKPowerups.h">
+      <Filter>Game\Powerups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Shop\MKBackgroundShopItem.h">
+      <Filter>Game\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Shop\MKHeroShopItem.h">
+      <Filter>Game\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Spawner\MKSpawner.h">
+      <Filter>Game\Spawner</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\Settings.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\StartScreen.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\AvailableScenes.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\Game.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\MainMenu.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\MenuTemplate.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\Shop\ShopBackgrounds.h">
+      <Filter>Scenes\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\Shop\ShopHeroes.h">
+      <Filter>Scenes\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\Shop\ShopMain.h">
+      <Filter>Scenes\Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\Shop\ShopTemplate.h">
+      <Filter>Scenes\Shop</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

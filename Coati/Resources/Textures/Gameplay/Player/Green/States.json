@@ -1,0 +1,65 @@
+{
+    "States": [
+        {
+            "Name": "Run",
+            "Frames": [
+                "Green_Run_0",
+                "Green_Run_1",
+                "Green_Run_2",
+                "Green_Run_3",
+                "Green_Run_4",
+                "Green_Run_5",
+                "Green_Run_6",
+                "Green_Run_7",
+                "Green_Run_8",
+                "Green_Run_9"
+            ]
+        },
+        {
+            "Name": "Slide",
+            "Frames": [
+                "Green_Slide_0",
+                "Green_Slide_1"
+            ]
+        },
+        {
+            "Name": "Jump_Start",
+            "Frames": [
+                "Green_Jump_0",
+                "Green_Jump_1",
+                "Green_Jump_2"
+            ]
+        },
+        {
+            "Name": "Jump_Loop",
+            "Frames": [
+                "Green_Jump_3",
+                "Green_Jump_4",
+                "Green_Jump_5",
+                "Green_Jump_6"
+            ]
+        },
+        {
+            "Name": "Jump_End",
+            "Frames": [
+                "Green_Jump_7",
+                "Green_Jump_8",
+                "Green_Jump_9"
+            ]
+        },
+        {
+            "Name" : "Die",
+            "Frames" :[
+                "Green_Die_1",
+                "Green_Die_2",
+                "Green_Die_3",
+                "Green_Die_4",
+                "Green_Die_5",
+                "Green_Die_6",
+                "Green_Die_7",
+                "Green_Die_8",
+                "Green_Die_9"
+            ]
+        }
+    ]
+}

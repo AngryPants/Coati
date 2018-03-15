@@ -1,0 +1,37 @@
+{
+    "Backgrounds" : [
+        {
+            "Name" : "Default",
+            "Price" : 1000,
+            "Textures" : [
+                "Textures/Backgrounds/Default/Layer_0.png",
+                "Textures/Backgrounds/Default/Layer_1.png",
+                "Textures/Backgrounds/Default/Layer_2.png",
+                "Textures/Backgrounds/Default/Layer_3.png",
+                "Textures/Backgrounds/Default/Layer_4.png"
+            ]
+        },
+        {
+            "Name" : "Mountains",
+            "Price" : 3000,
+            "Textures" : [
+                "Textures/Backgrounds/Mountains/Layer_0.png",
+                "Textures/Backgrounds/Mountains/Layer_1.png",
+                "Textures/Backgrounds/Mountains/Layer_2.png",
+                "Textures/Backgrounds/Mountains/Layer_3.png",
+                "Textures/Backgrounds/Mountains/Layer_4.png"
+            ]
+        },
+        {
+            "Name" : "Forest",
+            "Price" : 5000,
+            "Textures" : [
+                "Textures/Backgrounds/Forest/Layer_0.png",
+                "Textures/Backgrounds/Forest/Layer_1.png",
+                "Textures/Backgrounds/Forest/Layer_2.png",
+                "Textures/Backgrounds/Forest/Layer_3.png",
+                "Textures/Backgrounds/Forest/Layer_4.png"
+            ]
+        }
+    ]
+}

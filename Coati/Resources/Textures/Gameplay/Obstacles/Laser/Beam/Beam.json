@@ -1,0 +1,29 @@
+{
+    "States": [
+        {
+            "Name": "Beam",
+            "Frames": [
+                "Beam_0",
+                "Beam_1",
+                "Beam_2",
+                "Beam_3",
+                "Beam_4",
+                "Beam_5",
+                "Beam_6",
+                "Beam_7",
+                "Beam_7",
+                "Beam_7",
+                "Beam_7",
+                "Beam_7",
+                "Beam_7",
+                "Beam_6",
+                "Beam_5",
+                "Beam_4",
+                "Beam_3",
+                "Beam_2",
+                "Beam_1",
+                "Beam_0"
+            ]
+        }
+    ]
+}
