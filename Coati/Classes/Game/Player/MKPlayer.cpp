@@ -1,10 +1,10 @@
 // Include MK
 #include "MKPlayer.h"
-#include "../../MK/Gameplay/MKCollisionCategory.h"
-#include "../../Game/GameData/MKPlayerData.h"
-#include "../../Game/GameData/MKHeroData.h"
-#include "../../MK/GameData/MKGameDataLoader.h"
-#include "../../MK/Audio/MKAudioManager.h"
+#include "MK/Gameplay/MKCollisionCategory.h"
+#include "Game/GameData/MKPlayerData.h"
+#include "Game/GameData/MKHeroData.h"
+#include "MK/GameData/MKGameDataLoader.h"
+#include "MK/Audio/MKAudioManager.h"
 
 NS_MK_BEGIN
 

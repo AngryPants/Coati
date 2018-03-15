@@ -2,8 +2,8 @@
 #define MK_PLAYER_DATA_H
 
 // Include MK
-#include "../../MK/Common/MKMacros.h"
-#include "../../MK/GameData/MKGameData.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/GameData/MKGameData.h"
 #include "MKBackgroundData.h"
 
 // Include STL

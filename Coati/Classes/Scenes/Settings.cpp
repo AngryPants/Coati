@@ -1,6 +1,6 @@
 // Include MK
-#include "../MK/SceneManagement/MKSceneManager.h"
-#include "../MK/UI/MKUIHelper.h"
+#include "MK/SceneManagement/MKSceneManager.h"
+#include "MK/UI/MKUIHelper.h"
 
 // Include STL
 #include <cmath>

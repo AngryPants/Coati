@@ -3,7 +3,7 @@
 
 // Include MK
 #include "MKObstacle.h"
-#include "../../MK/Audio/MKAudioManager.h"
+#include "MK/Audio/MKAudioManager.h"
 
 NS_MK_BEGIN
 

@@ -1,9 +1,9 @@
 #pragma once
 
 // Include MK
-#include "../../MK/Common/MKMacros.h"
-#include "../../MK/Sprite/MKSprite.h"
-#include "../../MK/Audio/MKAudioManager.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Sprite/MKSprite.h"
+#include "MK/Audio/MKAudioManager.h"
 
 NS_MK_BEGIN
 

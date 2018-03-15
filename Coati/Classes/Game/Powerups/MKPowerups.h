@@ -4,10 +4,10 @@
 #include "cocos2d.h"
 
 // Include MK
-#include "../../MK/Common/MKMathsHelper.h"
-#include "../../MK/Sprite/MKSprite.h"
-#include "../../MK/SceneManagement/MKScene.h"
-#include "../../MK/Gameplay/MKGameplayMacros.h"
+#include "MK/Common/MKMathsHelper.h"
+#include "MK/Sprite/MKSprite.h"
+#include "MK/SceneManagement/MKScene.h"
+#include "MK/Gameplay/MKGameplayMacros.h"
 
 NS_MK_BEGIN
 

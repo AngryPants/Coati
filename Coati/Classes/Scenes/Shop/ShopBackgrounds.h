@@ -2,9 +2,9 @@
 #define SCENE_SHOP_BACKGROUND
 
 #include "ShopTemplate.h"
-#include "../../Game/GameData/MKPlayerData.h"
-#include "../../Game/GameData/MKBackgroundData.h"
-#include "../../MK/GameData/MKGameDataLoader.h"
+#include "Game/GameData/MKPlayerData.h"
+#include "Game/GameData/MKBackgroundData.h"
+#include "MK/GameData/MKGameDataLoader.h"
 
 class ShopBackgrounds : public ShopTemplate
 {

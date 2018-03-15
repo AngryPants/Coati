@@ -2,10 +2,10 @@
 #define TEMPLATE_MENU_SCENE_H
 
 // Include MK
-#include "../MK/SceneManagement/MKScene.h"
-#include "../MK/UI/MKUIHelper.h"
-#include "../Game/Background/MKBackground.h"
-#include "../MK/Sprite/MKSprite.h"
+#include "MK/SceneManagement/MKScene.h"
+#include "MK/UI/MKUIHelper.h"
+#include "Game/Background/MKBackground.h"
+#include "MK/Sprite/MKSprite.h"
 
 USING_NS_MK
 

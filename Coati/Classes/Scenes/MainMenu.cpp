@@ -1,8 +1,8 @@
 ﻿// Include MK
-#include "../MK/SceneManagement/MKSceneManager.h"
-#include "../MK/GameData/MKGameDataLoader.h"
-#include "../MK/Sprite/MKSprite.h"
-#include "../MK/UI/MKUIHelper.h"
+#include "MK/SceneManagement/MKSceneManager.h"
+#include "MK/GameData/MKGameDataLoader.h"
+#include "MK/Sprite/MKSprite.h"
+#include "MK/UI/MKUIHelper.h"
 
 // Include Header
 #include "MainMenu.h"

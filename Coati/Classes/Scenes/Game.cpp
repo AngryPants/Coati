@@ -2,16 +2,16 @@
 #include "Game.h"
 
 // Include MK
-#include "../MK/Audio/MKAudioManager.h"
-#include "../MK/SceneManagement/MKSceneManager.h"
-#include "../Game/GameData/MKPlayerData.h"
-#include "../Game/GameData/MKBackgroundData.h"
-#include "../MK/GameData/MKGameDataLoader.h"
-#include "../MK/Common/MKAssertions.h"
-#include "../MK/UI/MKUIHelper.h"
-#include "../MK/Gameplay/MKGameplayMacros.h"
-#include "../MK/Gameplay/MKCollisionCategory.h"
-#include "../MK/Actions/MKFollowNodeAction.h"
+#include "MK/Audio/MKAudioManager.h"
+#include "MK/SceneManagement/MKSceneManager.h"
+#include "Game/GameData/MKPlayerData.h"
+#include "Game/GameData/MKBackgroundData.h"
+#include "MK/GameData/MKGameDataLoader.h"
+#include "MK/Common/MKAssertions.h"
+#include "MK/UI/MKUIHelper.h"
+#include "MK/Gameplay/MKGameplayMacros.h"
+#include "MK/Gameplay/MKCollisionCategory.h"
+#include "MK/Actions/MKFollowNodeAction.h"
 
 // Constructor(s) & Destructor
 Game::Game()

@@ -2,10 +2,10 @@
 #include "StartScreen.h"
 
 // Include MK
-#include "../MK/GameData/MKGameDataLoader.h"
-#include "../Game/GameData/MKPlayerData.h"
-#include "../Game/GameData/MKBackgroundData.h"
-#include "../Game/GameData/MKHeroData.h"
+#include "MK/GameData/MKGameDataLoader.h"
+#include "Game/GameData/MKPlayerData.h"
+#include "Game/GameData/MKBackgroundData.h"
+#include "Game/GameData/MKHeroData.h"
 #include "external/json/document.h"
 
 bool StartScreen::init()

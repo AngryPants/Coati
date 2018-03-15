@@ -5,8 +5,8 @@
 #include "cocos2d.h"
 
 // Include MK
-#include "../../MK/Common/MKMacros.h"
-#include "../../MK/Common/MKSingletonTemplate.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKSingletonTemplate.h"
 #include "MKSound.h"
 
 // Include JSON

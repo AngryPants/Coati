@@ -1,10 +1,10 @@
 #pragma once
 
 // Include MK
-#include "../../MK/Common/MKMacros.h"
-#include "../../MK/Common/MKPasskey.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKPasskey.h"
 #include "../Shop/MKHeroShopItem.h"
-#include "../../MK/GameData/MKGameData.h"
+#include "MK/GameData/MKGameData.h"
 
 // Include STL
 #include <unordered_map>

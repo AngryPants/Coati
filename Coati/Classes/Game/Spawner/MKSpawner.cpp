@@ -1,8 +1,8 @@
 // Include MK
 #include "MKSpawner.h"
-#include "../../MK/Common/MKMathsHelper.h"
-#include "../../MK/Actions/MKFollowNodeAction.h"
-#include "../../MK/Actions/MKRepeatActionInstantForever.h"
+#include "MK/Common/MKMathsHelper.h"
+#include "MK/Actions/MKFollowNodeAction.h"
+#include "MK/Actions/MKRepeatActionInstantForever.h"
 #include "../Obstacles/MKMissile.h"
 #include "../Obstacles/MKSpike.h"
 #include "../Obstacles/MKSaw.h"

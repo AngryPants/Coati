@@ -1,10 +1,10 @@
 #pragma once
 
 #include "ShopTemplate.h"
-#include "../../Game/GameData/MKPlayerData.h"
-#include "../../Game/GameData/MKHeroData.h"
-#include "../../MK/GameData/MKGameDataLoader.h"
-#include "../../MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
+#include "Game/GameData/MKPlayerData.h"
+#include "Game/GameData/MKHeroData.h"
+#include "MK/GameData/MKGameDataLoader.h"
+#include "MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
 
 class ShopHeroes : public ShopTemplate
 {

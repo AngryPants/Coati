@@ -3,9 +3,9 @@
 
 // Include MK
 #include "MKObstacle.h"
-#include "../../MK/Audio/MKAudioManager.h"
-#include "../../MK/Input/MKInput.h"
-#include "../../MK/Input/MKInputMacros.h"
+#include "MK/Audio/MKAudioManager.h"
+#include "MK/Input/MKInput.h"
+#include "MK/Input/MKInputMacros.h"
 
 NS_MK_BEGIN
 

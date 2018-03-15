@@ -1,7 +1,7 @@
 // Include MK
 #include "ShopTemplate.h"
-#include "../../MK/GameData/MKGameDataLoader.h"
-#include "../../Game/GameData/MKPlayerData.h"
+#include "MK/GameData/MKGameDataLoader.h"
+#include "Game/GameData/MKPlayerData.h"
 
 // Constructor(s) & Destructor
 ShopTemplate::ShopTemplate()

@@ -5,7 +5,7 @@
 #include "cocos2d.h"
 
 // Include GT
-#include "../../MK/Common/MKMacros.h"
+#include "MK/Common/MKMacros.h"
 
 // Using Namespace
 USING_NS_CC;

@@ -1,9 +1,9 @@
 // Include MK
 #include "MenuTemplate.h"
-#include "../MK/Actions/MKFollowNodeAction.h"
-#include "../Game/GameData/MKPlayerData.h"
-#include "../Game/GameData/MKBackgroundData.h"
-#include "../MK/GameData/MKGameDataLoader.h"
+#include "MK/Actions/MKFollowNodeAction.h"
+#include "Game/GameData/MKPlayerData.h"
+#include "Game/GameData/MKBackgroundData.h"
+#include "MK/GameData/MKGameDataLoader.h"
 
 // Background
 void MenuTemplate::InitialiseBackground()

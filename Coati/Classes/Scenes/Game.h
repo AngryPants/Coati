@@ -2,12 +2,12 @@
 #define GAME_SCENE_H
 
 // Include MK
-#include "../MK/SceneManagement/MKScene.h"
-#include "../MK/Sprite/MKSprite.h"
-#include "../MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
-#include "../Game/Player/MKPlayer.h"
-#include "../Game/Background/MKBackground.h"
-#include "../Game/Spawner/MKSpawner.h"
+#include "MK/SceneManagement/MKScene.h"
+#include "MK/Sprite/MKSprite.h"
+#include "MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
+#include "Game/Player/MKPlayer.h"
+#include "Game/Background/MKBackground.h"
+#include "Game/Spawner/MKSpawner.h"
 
 USING_NS_MK
 

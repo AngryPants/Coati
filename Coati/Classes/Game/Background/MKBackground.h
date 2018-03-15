@@ -4,8 +4,8 @@
 #include "cocos2d.h"
 
 // Include MK
-#include "../../MK/Common/MKMacros.h"
-#include "../../MK/Sprite/MKSprite.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Sprite/MKSprite.h"
 #include "MKBackgroundLayer.h"
 
 // Include STL

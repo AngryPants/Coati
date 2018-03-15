@@ -1,5 +1,5 @@
 #include "ShopHeroes.h"
-#include "../../Game/Player/MKPlayer.h"
+#include "Game/Player/MKPlayer.h"
 
 // Constructor(s) & Destructor
 ShopHeroes::ShopHeroes()

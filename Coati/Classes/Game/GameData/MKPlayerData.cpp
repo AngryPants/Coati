@@ -3,7 +3,7 @@
 
 // Include MK
 #include "MKPlayerData.h"
-#include "../../MK/Common/MKJSONHelper.h"
+#include "MK/Common/MKJSONHelper.h"
 
 NS_MK_BEGIN
 

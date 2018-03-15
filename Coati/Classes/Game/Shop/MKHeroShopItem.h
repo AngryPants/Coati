@@ -1,7 +1,7 @@
 #pragma once
 
 // Include MK
-#include "../../MK/Shop/MKShopItem.h"
+#include "MK/Shop/MKShopItem.h"
 
 NS_MK_BEGIN
 

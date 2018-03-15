@@ -1,5 +1,5 @@
 // Include MK
-#include "../../MK/SceneManagement/MKSceneManager.h"
+#include "MK/SceneManagement/MKSceneManager.h"
 
 // Include Header
 #include "ShopMain.h"

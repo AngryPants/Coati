@@ -1,6 +1,6 @@
 // Include GT
 #include "MKSpike.h"
-#include "../../MK/Gameplay/MKCollisionCategory.h"
+#include "MK/Gameplay/MKCollisionCategory.h"
 
 NS_MK_BEGIN
 

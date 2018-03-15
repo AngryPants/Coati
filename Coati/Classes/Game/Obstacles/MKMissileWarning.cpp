@@ -1,8 +1,8 @@
 // Include MK
 #include "MKMissileWarning.h"
-#include "../../MK/Actions/MKFollowNodeAction.h"
-#include "../../MK/Actions/MKScaleUpAndDownAction.h"
-#include "../../MK/Actions/MKRemoveFromParentAction.h"
+#include "MK/Actions/MKFollowNodeAction.h"
+#include "MK/Actions/MKScaleUpAndDownAction.h"
+#include "MK/Actions/MKRemoveFromParentAction.h"
 
 NS_MK_BEGIN
 

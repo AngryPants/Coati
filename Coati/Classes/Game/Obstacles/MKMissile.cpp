@@ -1,7 +1,7 @@
 // Include MK
 #include "MKMissile.h"
-#include "../../MK/Gameplay/MKCollisionCategory.h"
-#include "../../MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
+#include "MK/Gameplay/MKCollisionCategory.h"
+#include "MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
 
 NS_MK_BEGIN
 

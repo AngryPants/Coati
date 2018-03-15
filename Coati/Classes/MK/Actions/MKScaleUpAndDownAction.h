@@ -5,7 +5,7 @@
 #include "cocos2d.h"
 
 // Include MK
-#include "../../MK/Common/MKMathsHelper.h"
+#include "MK/Common/MKMathsHelper.h"
 
 // Include STL
 #include <cmath>

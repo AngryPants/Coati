@@ -3,7 +3,7 @@
 
 // Include MK
 #include "MenuTemplate.h"
-#include "../MK/Sprite/MKSprite.h"
+#include "MK/Sprite/MKSprite.h"
 
 // Include STL
 #include <cmath>

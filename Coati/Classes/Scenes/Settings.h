@@ -6,8 +6,8 @@
 
 // Include MK
 #include "MenuTemplate.h"
-#include "../MK/Sprite/MKSprite.h"
-#include "../MK/Audio/MKAudioManager.h"
+#include "MK/Sprite/MKSprite.h"
+#include "MK/Audio/MKAudioManager.h"
 
 USING_NS_CC;
 USING_NS_MK

@@ -1,7 +1,7 @@
 // Include GT
 #include "MKSaw.h"
-#include "../../MK/Gameplay/MKCollisionCategory.h"
-#include "../../MK/Actions/MKMoveBySinCurveAction.h"
+#include "MK/Gameplay/MKCollisionCategory.h"
+#include "MK/Actions/MKMoveBySinCurveAction.h"
 
 NS_MK_BEGIN
 

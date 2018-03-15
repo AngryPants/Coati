@@ -2,12 +2,12 @@
 #define MK_PLAYER_H
 
 // Include MK
-#include "../../MK/Common/MKMacros.h"
-#include "../../MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
-#include "../../MK/Input/MKInputMacros.h"
-#include "../../MK/Actions/MKMoveBySinCurveAction.h"
-#include "../../MK/Gameplay/MKGameplayMacros.h"
-#include "../../MK/SceneManagement/MKScene.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
+#include "MK/Input/MKInputMacros.h"
+#include "MK/Actions/MKMoveBySinCurveAction.h"
+#include "MK/Gameplay/MKGameplayMacros.h"
+#include "MK/SceneManagement/MKScene.h"
 #include "../Powerups/MKShield.h"
 
 // Include STL

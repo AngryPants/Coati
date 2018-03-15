@@ -1,8 +1,8 @@
 // Include GT
 #include "MKLaser.h"
-#include "../../MK/Actions/MKFollowNodeAction.h"
-#include "../../MK/Gameplay/MKCollisionCategory.h"
-#include "../../MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
+#include "MK/Actions/MKFollowNodeAction.h"
+#include "MK/Gameplay/MKCollisionCategory.h"
+#include "MK/Sprite/SpriteAnimation/MKSpriteAnimation.h"
 
 NS_MK_BEGIN
 
