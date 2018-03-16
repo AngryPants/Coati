@@ -415,12 +415,12 @@ void MKPlayer::OnButton(EventCustom * _event)
 {
     MKInputButton* input = static_cast<MKInputButton*>(_event->getUserData());
 
-    if (input->m_ButtonState != MKInputButton::ButtonState::PRESS)
+    if (!m_Alive)
     {
         return;
     }
 
-    if (!m_Alive)
+    if (input->m_ButtonState != MKInputButton::ButtonState::PRESS)
     {
         return;
     }
@@ -442,6 +442,11 @@ void MKPlayer::OnClick(EventCustom * _event)
 {
     MKInputClick* input = static_cast<MKInputClick*>(_event->getUserData());
     
+    if (!m_Alive)
+    {
+        return;
+    }
+
     if (input->m_InputName == MinamiKotori::MKInputName::JUMP)
     {
         JumpTouchInput(input);

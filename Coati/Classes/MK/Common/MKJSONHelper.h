@@ -17,6 +17,7 @@
 #include "cocos2d.h"
 
 using namespace RAPIDJSON_NAMESPACE;
+USING_NS_CC;
 
 NS_MK_BEGIN
 
@@ -40,21 +41,16 @@ public:
     static bool LoadFromJSON(RAPIDJSON_NAMESPACE::Document& _document, const mkString& _filePath)
     {
         ssize_t contentSize = 0;
-        const char* fileContent = (const char*)cocos2d::FileUtils::getInstance()->getFileData(_filePath, "r", &contentSize);
-
+        mkString filePathForFilename = cocos2d::FileUtils::getInstance()->fullPathForFilename(_filePath);
+        mkString fileContent = cocos2d::FileUtils::getInstance()->getStringFromFile(filePathForFilename);
         // If the content size is 0, it failed to load.
-        if (contentSize == 0)
+        if (fileContent.size() == 0)
         {
             return false;
         }
 
-        // Add a null terminator.
-        mkString fileContentWithNullTerminator(fileContent);
-        size_t lastPosition = fileContentWithNullTerminator.rfind("}");
-        fileContentWithNullTerminator = fileContentWithNullTerminator.substr(0, lastPosition + 1);
-
         // Parse the document.
-        _document.Parse<0>(fileContentWithNullTerminator.c_str());
+        _document.Parse<0>(fileContent.c_str());
 
         return true;
     }

@@ -7,19 +7,17 @@
 // Include MK
 #include "MKMacros.h"
 
-#if MK_DEBUG
-
 /*
     Important Note:
     When using MK_ASSERT, add an extra pair of brackets if the condition is a
     function that needs to be ran! Otherwise, if MK_DEBUG is false, the function
     will not be ran.
-
+    
     E.g. MK_ASSERT((playerData->SaveData(playerData->GetWritablePath()))); <- Correct
     E.g. MK_ASSERT_WITH_LOG((playerData->SaveData(playerData->GetWritablePath())), "This is a message."); <- Correct
     E.g. MK_ASSERT(playerData->SaveData(playerData->GetWritablePath())); <- Wrong
     E.g. MK_ASSERT_WITH_LOG(playerData->SaveData(playerData->GetWritablePath()), "This is a message."); <- Wrong
-
+    
     Reason:
     When MK_DEBUG is false, the definition for this macro is empty.
     That means that the _condition in MK_ASSERT is ignoreed.
@@ -29,41 +27,48 @@
     are evaluated first. So this means that BEFORE entering the macro, the function is ran FIRST.
     After the function runs, the function returns a boolean. That boolean is THEN
     used in the macro, which is then ignored.
-
+    
     There are exceptions:
-
+    
     E.g. MK_ASSERT(coins->value.IsUint64()); <- Works with or without brackets.
     E.g. MK_ASSERT_WITH_LOG(coins->value.IsUint64(), "This is a message."); <- Works with or without brackets.
-
+    
     Reason:
     coins->value.IsUint64() is just to check if coins is an unsigned 64 bit int.
     coins is not modified at all in the IsUint64() function.
     Therefore, when there are no brackets present, the IsUint64() is not ran,
     but it does not matter since it does not change anything whether it ran or not.
-
+    
     TLDR (Or you don't know what the fuck I'm talking about.):
     If unsure, just always add an extra pair of brackets when using MK_ASSERT.
-
+    
     E.g. MK_ASSERT((a == b)); <- Do this.
     E.g. MK_ASSERT((variable.Function())); <- Do this.
     E.g. MK_ASSERT(a == b); <- Don't do this.
     E.g. MK_ASSERT(variable.Function()); <- Don't do this.
-
+    
     E.g. MK_ASSERT_WITH_LOG((a == b), "This is a message"); <- Do this.
     E.g. MK_ASSERT_WITH_LOG((variable.Function()), "This is a message"); <- Do this.
     E.g. MK_ASSERT_WITH_LOG(a == b, "This is a message"); <- Don't do this.
     E.g. MK_ASSERT_WITH_LOG(variable.Function(), "This is a message"); <- Don't do this.
 */
-#define MK_ASSERT(_condition) assert(_condition);
-#define MK_ASSERT_WITH_LOG(_condition, _message) \
-	if (!_condition) \
-	{ \
-        CCLOG(_message); \
-		CC_ASSERT(_condition); \
-	}
+#if MK_DEBUG
+#define MK_ASSERT(__CONDITION__) assert(__CONDITION__);
+
+// This does not fucking work on Android. Fuck Android.
+#define MK_ASSERT_WITH_LOG(_condition, _message)
+/*
+#define MK_ASSERT_WITH_LOG(__CONDITION__, __MESSAGE__) \
+    if (!__CONDITION__) \
+    { \
+        CCLOG((__MESSAGE__)); \
+        CC_ASSERT((__CONDITION__)); \
+    }
+*/
+
 #else
-	#define MK_ASSERT(_condition)
-	#define MK_ASSERT_WITH_LOG(_condition, _message)
+	#define MK_ASSERT(__CONDITION__)
+	#define MK_ASSERT_WITH_LOG(__CONDITION__, __MESSAGE__)
 #endif // MK_DEBUG
 
 #endif // MK_ASSERTIONS_H
