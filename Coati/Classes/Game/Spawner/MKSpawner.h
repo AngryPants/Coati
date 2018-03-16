@@ -8,8 +8,10 @@
 #include "MK/Common/MKMacros.h"
 #include "MK/SceneManagement/MKScene.h"
 #include "MK/Common/MKMathsHelper.h"
-#include "../Player/MKPlayer.h"
-#include "../Obstacles/MKMissileWarning.h"
+
+// Include Game
+#include "Game/Player/MKPlayer.h"
+#include "Game/Obstacles/MKMissileWarning.h"
 
 // Include STL
 #include <list>

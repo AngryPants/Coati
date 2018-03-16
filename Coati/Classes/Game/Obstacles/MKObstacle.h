@@ -58,25 +58,25 @@ protected:
         return true;
     }
 
-    mkF32 MKObstacle::GetScreenTop() const
+    mkF32 GetScreenTop() const
     {
         Size visibleSize = Director::getInstance()->getVisibleSize();
         return m_Scene->getDefaultCamera()->getPositionX() + visibleSize.height * 0.5f;
     }
 
-    mkF32 MKObstacle::GetScreenBottom() const
+    mkF32 GetScreenBottom() const
     {
         Size visibleSize = Director::getInstance()->getVisibleSize();
         return m_Scene->getDefaultCamera()->getPositionX() - visibleSize.height * 0.5f;
     }
 
-    mkF32 MKObstacle::GetScreenRight() const
+    mkF32 GetScreenRight() const
     {
         Size visibleSize = Director::getInstance()->getVisibleSize();
         return m_Scene->getDefaultCamera()->getPositionX() + visibleSize.width * 0.5f;
     }
 
-    mkF32 MKObstacle::GetScreenLeft() const
+    mkF32 GetScreenLeft() const
     {
         Size visibleSize = Director::getInstance()->getVisibleSize();
         return m_Scene->getDefaultCamera()->getPositionX() - visibleSize.width * 0.5f;

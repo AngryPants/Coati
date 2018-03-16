@@ -7,10 +7,10 @@
 #include <typeinfo>
 
 // Include MK
+#include "MK/Common/MKAssertions.h"
+#include "MK/Common/MKMathsHelper.h"
 #include "MKKeyboardHandler.h"
 #include "MKInput.h"
-#include "../Common/MKAssertions.h"
-#include "../Common/MKMathsHelper.h"
 
 #if MK_USE_KEYBOARD
 
@@ -56,8 +56,8 @@ void MKKeyboardHandler::RemoveHeldKey(cocos2d::EventKeyboard::KeyCode _keyCode)
 	//CCLOG("Held Key Removed");
 	std::map<cocos2d::EventKeyboard::KeyCode, mkU32>::iterator mapIter = m_HeldKeys.find(_keyCode);
 	if (mapIter == m_HeldKeys.end()) { return; }
-	MK_ASSERTWITHMSG((mapIter != m_HeldKeys.end()), "MKKeyboardHandler::RemoveHeldKey - Key not found in m_HeldKeys!");
-	MK_ASSERTWITHMSG((mapIter->second != 0), "MKKeyboardHandler::RemoveHeldKey - Invalid value for counter of _keycode!");
+	MK_ASSERT_WITH_LOG((mapIter != m_HeldKeys.end()), "MKKeyboardHandler::RemoveHeldKey - Key not found in m_HeldKeys!");
+	MK_ASSERT_WITH_LOG((mapIter->second != 0), "MKKeyboardHandler::RemoveHeldKey - Invalid value for counter of _keycode!");
 
 	mapIter->second -= 1;
 	if (mapIter->second == 0)
@@ -148,7 +148,7 @@ void MKKeyboardHandler::RegisterButton(MKPasskey<MKInputDefinition> _key, mkU64 
 	{
 #if MK_DEBUG
 		mkString assertMessage = "MKKeyboardHandler::RegisterButton - A InputName was registered twice with the same mask!";
-		MK_ASSERTWITHMSG((mapIter->second.find(_inputName) == mapIter->second.end()), assertMessage.c_str());
+		MK_ASSERT_WITH_LOG((mapIter->second.find(_inputName) == mapIter->second.end()), assertMessage.c_str());
 #endif // MK_DEBUG
 
 		mapIter->second.insert(_inputName);
@@ -166,7 +166,7 @@ void MKKeyboardHandler::UnregisterButton(MKPasskey<MKInputDefinition> _key, mkU6
 #if MK_DEBUG
 	{
 		mkString assertMessage = "MKKeyboardHandler::UnregisterButton - There are no the specified mask is not registered!";
-		MK_ASSERTWITHMSG((mapIter != m_RegisteredButtons.end()), assertMessage.c_str());
+		MK_ASSERT_WITH_LOG((mapIter != m_RegisteredButtons.end()), assertMessage.c_str());
 	}
 #endif // MK_DEBUG
 
@@ -175,7 +175,7 @@ void MKKeyboardHandler::UnregisterButton(MKPasskey<MKInputDefinition> _key, mkU6
 #if MK_DEBUG
 	{
 		mkString assertMessage = "MKKeyboardHandler::UnregisterButton - There are no InputNames registered using the specified mask!";
-		MK_ASSERTWITHMSG((setIter != mapIter->second.end()), assertMessage.c_str());
+		MK_ASSERT_WITH_LOG((setIter != mapIter->second.end()), assertMessage.c_str());
 	}
 #endif // MK_DEBUG
 
@@ -202,7 +202,7 @@ void MKKeyboardHandler::SendButtonHeldEvents()
 	MKInputContext currentContext = MKInputManager::GetInstance()->GetCurrentContext();
 	for (mkS32 i = 0; i < (mkS32)MKInputName::NUM_INPUTNAME; ++i)
 	{
-		MK_ASSERTWITHMSG((m_HeldButtons[i] >= 0), "MKKeyboardHandler::SendButtonHeldEvents - Held Buttons counter should never be less than 0.");
+		MK_ASSERT_WITH_LOG((m_HeldButtons[i] >= 0), "MKKeyboardHandler::SendButtonHeldEvents - Held Buttons counter should never be less than 0.");
 		if (m_HeldButtons[i] > 0)
 		{
 			MKInputButton* hold = new MKInputButton(static_cast<MKInputName>(i), currentContext, MKInputButton::HOLD);

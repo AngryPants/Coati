@@ -5,9 +5,9 @@
 #include <type_traits>
 
 // Include MK
-#include "../Common/MKMacros.h"
-#include "../Common/MKAssertions.h"
-#include "../Common/MKJSONHelper.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKAssertions.h"
+#include "MK/Common/MKJSONHelper.h"
 
 NS_MK_BEGIN
 

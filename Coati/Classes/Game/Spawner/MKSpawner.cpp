@@ -3,11 +3,13 @@
 #include "MK/Common/MKMathsHelper.h"
 #include "MK/Actions/MKFollowNodeAction.h"
 #include "MK/Actions/MKRepeatActionInstantForever.h"
-#include "../Obstacles/MKMissile.h"
-#include "../Obstacles/MKSpike.h"
-#include "../Obstacles/MKSaw.h"
-#include "../Obstacles/MKLaser.h"
-#include "../Powerups/MKPowerups.h"
+
+// Include Game
+#include "Game/Obstacles/MKMissile.h"
+#include "Game/Obstacles/MKSpike.h"
+#include "Game/Obstacles/MKSaw.h"
+#include "Game/Obstacles/MKLaser.h"
+#include "Game/Powerups/MKPowerups.h"
 
 NS_MK_BEGIN
 

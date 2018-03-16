@@ -1,16 +1,14 @@
 #ifndef MK_INPUTDEFINITION_H
 #define MK_INPUTDEFINITION_H
 
-// Include Cocos
-
 // Include STL
 #include <functional>
 
 // Include MK
-#include "../Common/MKMacros.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKPasskey.h"
 #include "MKInputName.h"
 #include "MKInput.h"
-#include "../Common/MKPasskey.h"
 
 NS_MK_BEGIN
 

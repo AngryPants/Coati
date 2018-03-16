@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../MenuTemplate.h"
+#include "Scenes/MenuTemplate.h"
 
 class ShopTemplate : public MenuTemplate
 {

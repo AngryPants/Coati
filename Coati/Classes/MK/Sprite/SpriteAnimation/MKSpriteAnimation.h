@@ -5,8 +5,8 @@
 #include "cocos2d.h"
 
 // Include MK
-#include "../../Common/MKMacros.h"
-#include "../MKSprite.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Sprite/MKSprite.h"
 #include "MKSpriteAnimationState.h"
 #include "MKSpriteAnimationTicket.h"
 

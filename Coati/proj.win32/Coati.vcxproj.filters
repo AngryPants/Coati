@@ -227,16 +227,10 @@
     <ClInclude Include="..\Classes\MK\Common\MKAssertions.h">
       <Filter>MK\Common</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\MK\Common\MKEnumMacros.h">
-      <Filter>MK\Common</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\MK\Common\MKJSONHelper.h">
       <Filter>MK\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MK\Common\MKMacros.h">
-      <Filter>MK\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\MK\Common\MKMacros2.h">
       <Filter>MK\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MK\Common\MKMathsHelper.h">

@@ -5,7 +5,7 @@
 #include <unordered_map>
 
 // Include MK
-#include "../Common/MKSingletonTemplate.h"
+#include "MK/Common/MKSingletonTemplate.h"
 #include "MKGameData.h"
 
 NS_MK_BEGIN

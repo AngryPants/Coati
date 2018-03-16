@@ -1,8 +1,8 @@
 // Include MK
 #include "MKSpriteAnimation.h"
-#include "../../Common/MKJSONHelper.h"
-#include "../../Common/MKAssertions.h"
-#include "../../Actions/MKRemoveFromParentAction.h"
+#include "MK/Common/MKJSONHelper.h"
+#include "MK/Common/MKAssertions.h"
+#include "MK/Actions/MKRemoveFromParentAction.h"
 
 NS_MK_BEGIN
 

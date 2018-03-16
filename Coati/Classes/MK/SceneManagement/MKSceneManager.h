@@ -40,21 +40,21 @@ public:
 	template <typename T>
 	void AddScene(const mkString& _sceneName)
 	{
-		MK_ASSERTWITHMSG((!CheckSceneExist(_sceneName)), "MKSceneManager::AddScene - There is already a scene with this name!");
+		MK_ASSERT_WITH_LOG((!CheckSceneExist(_sceneName)), "MKSceneManager::AddScene - There is already a scene with this name!");
 		m_SceneMap.insert(std::pair<mkString, std::function<MKScene*()> >(_sceneName, T::create));
 	}
 
 	template <typename T>
 	void AddSceneWithPhysics(const mkString& _sceneName)
 	{
-		MK_ASSERTWITHMSG((!CheckSceneExist(_sceneName)), "MKSceneManager::AddScene - There is already a scene with this name!");
+		MK_ASSERT_WITH_LOG((!CheckSceneExist(_sceneName)), "MKSceneManager::AddScene - There is already a scene with this name!");
 		m_SceneMap.insert(std::pair < mkString, std::function<MKScene*()> >(_sceneName, T::createWithPhysics));
 	}
 	
 	void RemoveScene(const mkString& _sceneName)
 	{
 		std::unordered_map<mkString, std::function<MKScene*()> >::const_iterator iter = m_SceneMap.find(_sceneName);
-		MK_ASSERTWITHMSG((iter != m_SceneMap.end()), "MKSceneManager::RemoveScene - Scene not found!");
+		MK_ASSERT_WITH_LOG((iter != m_SceneMap.end()), "MKSceneManager::RemoveScene - Scene not found!");
 		m_SceneMap.erase(iter);
 	}
 

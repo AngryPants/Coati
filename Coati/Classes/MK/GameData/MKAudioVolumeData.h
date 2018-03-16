@@ -1,9 +1,9 @@
 #pragma once
 
 // Include MK
-#include "../Common/MKMacros.h"
-#include "../Common/MKPasskey.h"
-#include "../Audio/MKSound.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKPasskey.h"
+#include "MK/Audio/MKSound.h"
 #include "MKGameData.h"
 
 NS_MK_BEGIN

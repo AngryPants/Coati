@@ -10,8 +10,8 @@
 #include "ui/UIScrollView.h"
 
 // Include MK
-#include "../Common/MKMacros.h"
-#include "../Common/MKAssertions.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKAssertions.h"
 
 // Namespaces
 USING_NS_CC;

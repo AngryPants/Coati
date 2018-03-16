@@ -49,7 +49,7 @@ $(LOCAL_PATH)/../../../Classes/Game/Player/MKPlayer.cpp \
 $(LOCAL_PATH)/../../../Classes/Game/Obstacles/MKSpike.cpp \
 $(LOCAL_PATH)/../../../Classes/Game/Obstacles/MKSaw.cpp \
 $(LOCAL_PATH)/../../../Classes/Game/Obstacles/MKMissileWarning.cpp \
-$(LOCAL_PATH)/../../../Classes/Game/Obstacles/MKMissle.cpp \
+$(LOCAL_PATH)/../../../Classes/Game/Obstacles/MKMissile.cpp \
 $(LOCAL_PATH)/../../../Classes/Game/Obstacles/MKLaser.cpp \
 \
 $(LOCAL_PATH)/../../../Classes/Game/GameData/MKPlayerData.cpp \
@@ -57,7 +57,18 @@ $(LOCAL_PATH)/../../../Classes/Game/GameData/MKHeroData.cpp \
 $(LOCAL_PATH)/../../../Classes/Game/GameData/MKBackgroundData.cpp \
 \
 $(LOCAL_PATH)/../../../Classes/Game/Background/MKBackgroundLayer.cpp \
-$(LOCAL_PATH)/../../../Classes/Game/Background/MKBackground.cpp
+$(LOCAL_PATH)/../../../Classes/Game/Background/MKBackground.cpp \
+\
+$(LOCAL_PATH)/../../../Classes/Scenes/MenuTemplate.cpp \
+$(LOCAL_PATH)/../../../Classes/Scenes/Game.cpp \
+$(LOCAL_PATH)/../../../Classes/Scenes/StartScreen.cpp \
+$(LOCAL_PATH)/../../../Classes/Scenes/MainMenu.cpp \
+$(LOCAL_PATH)/../../../Classes/Scenes/Settings.cpp \
+\
+$(LOCAL_PATH)/../../../Classes/Scenes/Shop/ShopTemplate.cpp \
+$(LOCAL_PATH)/../../../Classes/Scenes/Shop/ShopHeroes.cpp \
+$(LOCAL_PATH)/../../../Classes/Scenes/Shop/ShopMain.cpp \
+$(LOCAL_PATH)/../../../Classes/Scenes/Shop/ShopBackgrounds.cpp
 
 # _COCOS_HEADER_ANDROID_BEGIN
 # _COCOS_HEADER_ANDROID_END

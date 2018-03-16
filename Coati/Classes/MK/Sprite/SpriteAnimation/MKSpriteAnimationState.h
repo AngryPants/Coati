@@ -5,7 +5,7 @@
 #include "cocos2d.h"
 
 // Include MK
-#include "../../Common/MKMacros.h"
+#include "MK/Common/MKMacros.h"
 
 // Include STL
 #include <vector>

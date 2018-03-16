@@ -16,9 +16,9 @@
     will not be ran.
 
     E.g. MK_ASSERT((playerData->SaveData(playerData->GetWritablePath()))); <- Correct
-    E.g. MK_ASSERTWITHMSG((playerData->SaveData(playerData->GetWritablePath())), "This is a message."); <- Correct
+    E.g. MK_ASSERT_WITH_LOG((playerData->SaveData(playerData->GetWritablePath())), "This is a message."); <- Correct
     E.g. MK_ASSERT(playerData->SaveData(playerData->GetWritablePath())); <- Wrong
-    E.g. MK_ASSERTWITHMSG(playerData->SaveData(playerData->GetWritablePath()), "This is a message."); <- Wrong
+    E.g. MK_ASSERT_WITH_LOG(playerData->SaveData(playerData->GetWritablePath()), "This is a message."); <- Wrong
 
     Reason:
     When MK_DEBUG is false, the definition for this macro is empty.
@@ -33,7 +33,7 @@
     There are exceptions:
 
     E.g. MK_ASSERT(coins->value.IsUint64()); <- Works with or without brackets.
-    E.g. MK_ASSERTWITHMSG(coins->value.IsUint64(), "This is a message."); <- Works with or without brackets.
+    E.g. MK_ASSERT_WITH_LOG(coins->value.IsUint64(), "This is a message."); <- Works with or without brackets.
 
     Reason:
     coins->value.IsUint64() is just to check if coins is an unsigned 64 bit int.
@@ -49,21 +49,21 @@
     E.g. MK_ASSERT(a == b); <- Don't do this.
     E.g. MK_ASSERT(variable.Function()); <- Don't do this.
 
-    E.g. MK_ASSERTWITHMSG((a == b), "This is a message"); <- Do this.
-    E.g. MK_ASSERTWITHMSG((variable.Function()), "This is a message"); <- Do this.
-    E.g. MK_ASSERTWITHMSG(a == b, "This is a message"); <- Don't do this.
-    E.g. MK_ASSERTWITHMSG(variable.Function(), "This is a message"); <- Don't do this.
+    E.g. MK_ASSERT_WITH_LOG((a == b), "This is a message"); <- Do this.
+    E.g. MK_ASSERT_WITH_LOG((variable.Function()), "This is a message"); <- Do this.
+    E.g. MK_ASSERT_WITH_LOG(a == b, "This is a message"); <- Don't do this.
+    E.g. MK_ASSERT_WITH_LOG(variable.Function(), "This is a message"); <- Don't do this.
 */
 #define MK_ASSERT(_condition) assert(_condition);
-#define MK_ASSERTWITHMSG(_condition, _message) \
+#define MK_ASSERT_WITH_LOG(_condition, _message) \
 	if (!_condition) \
 	{ \
         CCLOG(_message); \
 		CC_ASSERT(_condition); \
 	}
 #else
-	#define MK_ASSERT(_condition);
-	#define MK_ASSERTWITHMSG(_condition, _message);
+	#define MK_ASSERT(_condition)
+	#define MK_ASSERT_WITH_LOG(_condition, _message)
 #endif // MK_DEBUG
 
 #endif // MK_ASSERTIONS_H

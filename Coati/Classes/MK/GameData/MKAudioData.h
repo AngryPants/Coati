@@ -2,8 +2,8 @@
 #define MK_AUDIO_DATA_H
 
 // Include MK
-#include "../Common/MKMacros.h"
-#include "../Common/MKPasskey.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKPasskey.h"
 #include "MKGameData.h"
 
 // Include STL

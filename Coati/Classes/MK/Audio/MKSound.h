@@ -2,10 +2,10 @@
 #define MK_SOUND_H
 
 // Include MK
-#include "../Common/MKMacros.h"
-#include "../Common/MKMathsHelper.h"
-#include "../Common/MKPasskey.h"
-#include "../Common/MKAssertions.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKMathsHelper.h"
+#include "MK/Common/MKPasskey.h"
+#include "MK/Common/MKAssertions.h"
 
 NS_MK_BEGIN
 

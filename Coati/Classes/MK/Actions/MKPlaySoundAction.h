@@ -5,7 +5,7 @@
 #include "cocos2d.h"
 
 // Include GT
-#include "../Audio/MKAudioManager.h"
+#include "MK/Audio/MKAudioManager.h"
 
 USING_NS_CC;
 

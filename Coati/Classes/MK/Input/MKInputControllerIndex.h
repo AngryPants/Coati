@@ -2,7 +2,7 @@
 #define MK_INPUTCONTROLLERINDEX_H
 
 // Include MK
-#include "../Common/MKMacros.h"
+#include "MK/Common/MKMacros.h"
 
 NS_MK_BEGIN
 

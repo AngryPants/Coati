@@ -57,7 +57,7 @@ void ShopTemplate::InitialiseWalletUI()
 
     mkF32 iconValuePadding = m_WalletCoinIcon->getScaledContentSize().width * 0.5f; // The space between the number and the icon.
 
-    m_WalletValue = MKUIHelper::CreateLabel(std::to_string(playerData->GetCoins()), m_WalletCoinIcon->getScaledContentSize().height);
+    m_WalletValue = MKUIHelper::CreateLabel(StringUtils::toString(playerData->GetCoins()), m_WalletCoinIcon->getScaledContentSize().height);
     mkF32 fontSize = m_WalletCoinIcon->getScaledContentSize().height;
     mkF32 valuePositionX = m_WalletCoinIcon->getPositionX() - (m_WalletCoinIcon->getScaledContentSize().width + m_WalletValue->getScaledContentSize().width) * 0.5f - iconValuePadding;
     mkF32 valuePositionY = m_Banner->getPositionY();
@@ -70,7 +70,7 @@ void ShopTemplate::UpdateWalletUI()
 {
     MKPlayerData* playerData = MKGameDataLoader::GetInstance()->GetGameData<MKPlayerData>();
 
-    m_WalletValue->setString(std::to_string(playerData->GetCoins()));
+    m_WalletValue->setString(StringUtils::toString(playerData->GetCoins()));
     mkF32 valuePositionX = m_WalletCoinIcon->getPositionX() - m_WalletCoinIcon->getScaledContentSize().width - (m_WalletValue->getScaledContentSize().width * 0.5f);
     mkF32 valuePositionY = m_Banner->getPositionY();
     m_WalletValue->setPositionX(valuePositionX);
@@ -216,7 +216,7 @@ void ShopTemplate::UpdateItemPrice(mkBool _ownsItem, mkU64 _price, mkBool _suffi
         return;
     }
 
-    m_ItemPriceValue->setString(std::to_string(_price));
+    m_ItemPriceValue->setString(StringUtils::toString(_price));
     if (_sufficientCoins)
     {
         m_ItemPriceValue->setTextColor(m_SufficientCoinsColor);

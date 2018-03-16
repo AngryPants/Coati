@@ -3,8 +3,10 @@
 // Include MK
 #include "MK/Common/MKMacros.h"
 #include "MK/Common/MKPasskey.h"
-#include "../Shop/MKBackgroundShopItem.h"
 #include "MK/GameData/MKGameData.h"
+
+// Include Game
+#include "Game/Shop/MKBackgroundShopItem.h"
 
 // Include STL
 #include <unordered_map>

@@ -8,7 +8,9 @@
 #include "MK/Actions/MKMoveBySinCurveAction.h"
 #include "MK/Gameplay/MKGameplayMacros.h"
 #include "MK/SceneManagement/MKScene.h"
-#include "../Powerups/MKShield.h"
+
+// Include Game
+#include "Game/Powerups/MKShield.h"
 
 // Include STL
 #include <functional>

@@ -1,8 +1,8 @@
 // Include MK
 #include "MKAudioManager.h"
-#include "../GameData/MKGameDataLoader.h"
-#include "../GameData/MKAudioData.h"
-#include "../GameData/MKAudioVolumeData.h"
+#include "MK/GameData/MKGameDataLoader.h"
+#include "MK/GameData/MKAudioData.h"
+#include "MK/GameData/MKAudioVolumeData.h"
 
 // Include JSON
 #include "external/json/filewritestream.h"

@@ -23,8 +23,6 @@ NS_MK_BEGIN
 class MKJSONHelper
 {
 public:
-    static const mkU16 m_MaxFileCharacters = 65535;
-
     static mkString JsonToString(RAPIDJSON_NAMESPACE::Document& _jsonObject)
     {
         RAPIDJSON_NAMESPACE::StringBuffer buffer;
@@ -41,14 +39,22 @@ public:
 
     static bool LoadFromJSON(RAPIDJSON_NAMESPACE::Document& _document, const mkString& _filePath)
     {
-        FILE* inputFile = std::fopen(_filePath.c_str(), "r");
-        if (inputFile == nullptr) { return false; }
-        
-        char buffer[m_MaxFileCharacters]; // The number of characters in the file must not exceed m_MaxFileCharacters.
-        RAPIDJSON_NAMESPACE::FileReadStream fileReadStream(inputFile, buffer, sizeof(buffer));
-        _document.ParseStream(fileReadStream);
+        ssize_t contentSize = 0;
+        const char* fileContent = (const char*)cocos2d::FileUtils::getInstance()->getFileData(_filePath, "r", &contentSize);
 
-        std::fclose(inputFile);
+        // If the content size is 0, it failed to load.
+        if (contentSize == 0)
+        {
+            return false;
+        }
+
+        // Add a null terminator.
+        mkString fileContentWithNullTerminator(fileContent);
+        size_t lastPosition = fileContentWithNullTerminator.rfind("}");
+        fileContentWithNullTerminator = fileContentWithNullTerminator.substr(0, lastPosition + 1);
+
+        // Parse the document.
+        _document.Parse<0>(fileContentWithNullTerminator.c_str());
 
         return true;
     }

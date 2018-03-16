@@ -1,6 +1,6 @@
 // Include MK
 #include "MKAudioData.h"
-#include "../Common/MKJSONHelper.h"
+#include "MK/Common/MKJSONHelper.h"
 
 NS_MK_BEGIN
 

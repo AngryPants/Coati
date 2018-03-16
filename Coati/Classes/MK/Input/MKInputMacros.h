@@ -2,7 +2,7 @@
 #define MK_INPUT_MACROS_H
 
 // Include MK
-#include "../Common/MKMacros.h"
+#include "MK/Common/MKMacros.h"
 #include "MKInputManager.h"
 
 USING_NS_MK

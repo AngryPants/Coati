@@ -5,8 +5,8 @@
 #include "cocos2d.h"
 
 // Include MK
-#include "../../Common/MKMacros.h"
-#include "../../Common/MKAssertions.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKAssertions.h"
 
 class MKSpriteAnimationTicket : public cocos2d::Ref
 {

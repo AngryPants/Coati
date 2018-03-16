@@ -12,11 +12,11 @@
 #include <string>
 
 // Include MK
-#include "../Common/MKMacros.h"
-#include "../Common/MKSingletonTemplate.h"
-#include "../Common/MKPasskey.h"
 #include "MKInputManager.h"
 #include "MKInputName.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKSingletonTemplate.h"
+#include "MK/Common/MKPasskey.h"
 
 USING_NS_CC;
 using namespace std;

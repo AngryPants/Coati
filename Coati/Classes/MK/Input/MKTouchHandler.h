@@ -12,9 +12,9 @@
 #include <string>
 
 // Include MK
-#include "../Common/MKMacros.h"
-#include "../Common/MKSingletonTemplate.h"
-#include "../Common/MKPasskey.h"
+#include "MK/Common/MKMacros.h"
+#include "MK/Common/MKSingletonTemplate.h"
+#include "MK/Common/MKPasskey.h"
 #include "MKInputName.h"
 #include "MKInput.h"
 #include "MKInputManager.h"

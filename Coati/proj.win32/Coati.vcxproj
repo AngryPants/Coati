@@ -216,10 +216,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\MK\Audio\MKAudioManager.h" />
     <ClInclude Include="..\Classes\MK\Audio\MKSound.h" />
     <ClInclude Include="..\Classes\MK\Common\MKAssertions.h" />
-    <ClInclude Include="..\Classes\MK\Common\MKEnumMacros.h" />
     <ClInclude Include="..\Classes\MK\Common\MKJSONHelper.h" />
     <ClInclude Include="..\Classes\MK\Common\MKMacros.h" />
-    <ClInclude Include="..\Classes\MK\Common\MKMacros2.h" />
     <ClInclude Include="..\Classes\MK\Common\MKMathsHelper.h" />
     <ClInclude Include="..\Classes\MK\Common\MKPasskey.h" />
     <ClInclude Include="..\Classes\MK\Common\MKSingletonTemplate.h" />

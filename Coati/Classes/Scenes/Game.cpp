@@ -300,7 +300,7 @@ void Game::CreateGameOverUI()
 
     // Current Score
     {
-        cocos2d::Label* label = MKUIHelper::CreateLabel("SCORE: " + std::to_string(m_Player->GetScore()), fontSize);
+        cocos2d::Label* label = MKUIHelper::CreateLabel("SCORE: " + StringUtils::toString(m_Player->GetScore()), fontSize);
         label->setPosition(visibleSize.width * 0.5f, visibleSize.height * 0.9f);
         label->setTextColor(cocos2d::Color4B::BLACK);
         m_GameOverUINode->addChild(label);
@@ -313,12 +313,12 @@ void Game::CreateGameOverUI()
         MKPlayerData* playerData = MKGameDataLoader::GetInstance()->GetGameData<MKPlayerData>();
         if (playerData->GetHighscore() < m_Player->GetScore())
         {
-            label->setString("[NEW!] HIGHSCORE: " + std::to_string(m_Player->GetScore()));
+            label->setString("[NEW!] HIGHSCORE: " + StringUtils::toString(m_Player->GetScore()));
             label->setTextColor(cocos2d::Color4B::RED);
         }
         else
         {
-            label->setString("HIGHSCORE: " + std::to_string(playerData->GetHighscore()));
+            label->setString("HIGHSCORE: " + StringUtils::toString(playerData->GetHighscore()));
             label->setTextColor(cocos2d::Color4B::BLACK);
         }
         
@@ -406,7 +406,7 @@ void Game::UpdateScoreUI()
 {
     if (m_ScoreLabel == nullptr) { return; }
 
-    m_ScoreLabel->setString("Score: " + std::to_string(m_Player->GetScore()));
+    m_ScoreLabel->setString("Score: " + StringUtils::toString(m_Player->GetScore()));
 }
 
 // Callbacks

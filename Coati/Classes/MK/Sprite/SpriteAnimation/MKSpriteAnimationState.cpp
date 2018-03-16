@@ -1,6 +1,6 @@
 // Include MK
 #include "MKSpriteAnimationState.h"
-#include "../../Common/MKAssertions.h"
+#include "MK/Common/MKAssertions.h"
 
 NS_MK_BEGIN
 

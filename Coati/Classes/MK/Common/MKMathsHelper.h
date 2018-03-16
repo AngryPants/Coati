@@ -6,6 +6,7 @@
 
 // Include STL
 #include <cmath>
+#include <stdlib.h>
 
 NS_MK_BEGIN
 
@@ -59,7 +60,7 @@ public:
 
     static mkS32 RandomInt()
     {
-        return std::rand();
+        return rand();
     }
 
     static mkS32 RandomInt(mkS32 _min/*Inclusive*/, mkS32 _max /*Exclusive*/)
