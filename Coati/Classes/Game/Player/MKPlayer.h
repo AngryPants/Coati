@@ -113,15 +113,12 @@ protected:
     MK_DECL_DEINITIALISE_INPUT(MKPlayer);
 
     // Player Controls
-    mkF32 m_SwipeDeadZone = 0.3f;
+    mkF32 m_SwipeDeadZone = 0.4f;
 
-    MKCursorPosition m_SlideClickStartPosition;
-    MKCursorPosition m_SlideClickCurrentPosition;
-    void SlideTouchInput(const MKInputClick* _input);
-
-    MKCursorPosition m_JumpClickStartPosition;
-    MKCursorPosition m_JumpClickCurrentPosition;
-    void JumpTouchInput(const MKInputClick* _input);
+    MKCursorPosition m_ClickStartPosition;
+    MKCursorPosition m_ClickCurrentPosition;
+    mkBool m_ClickReleased = true;
+    void PlayerTouchInput(const MKInputClick* _input);
 
 
 public:

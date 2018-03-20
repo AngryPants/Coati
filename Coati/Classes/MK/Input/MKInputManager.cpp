@@ -43,15 +43,6 @@ void MKInputManager::InitializeDefinitions()
             inputMask,
             0);
 	}
-    // Jumping (Touch/Mouse)
-	{
-		mkU64 inputMask = MKInputManager::GenerateMask(MK_INPUT_CONTEXT_GAMEPLAY, MK_CONTROLLER_1, 0);
-		m_InputDefinitions[MKInputName::JUMP]->Register(
-			CC_CALLBACK_3(MKTouchHandler::RegisterClick, touchHandler),
-			CC_CALLBACK_3(MKTouchHandler::UnregisterClick, touchHandler),
-            inputMask,
-            1);
-	}
     
     // Sliding (Keyboard)
     {
@@ -62,14 +53,15 @@ void MKInputManager::InitializeDefinitions()
             inputMask,
             0);
     }
-    // Sliding (Touch/Mouse)
+
+    // Player Touch Control (Touch/Mouse)
     {
         mkU64 inputMask = MKInputManager::GenerateMask(MK_INPUT_CONTEXT_GAMEPLAY, MK_CONTROLLER_1, 0);
-        m_InputDefinitions[MKInputName::SLIDE]->Register(
+        m_InputDefinitions[MKInputName::PLAYER_TOUCH_CONTROL]->Register(
             CC_CALLBACK_3(MKTouchHandler::RegisterClick, touchHandler),
             CC_CALLBACK_3(MKTouchHandler::UnregisterClick, touchHandler),
             inputMask,
-            1);
+            0);
     }
 }
 

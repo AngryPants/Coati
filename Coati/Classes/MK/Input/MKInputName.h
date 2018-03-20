@@ -7,8 +7,9 @@ NS_MK_BEGIN
 
 enum MKInputName
 {
-	JUMP = 0,
-	SLIDE,
+    JUMP,
+    SLIDE,
+	PLAYER_TOUCH_CONTROL,
     START_GAME,
 
 	NUM_INPUTNAME,

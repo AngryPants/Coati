@@ -415,10 +415,7 @@ void MKPlayer::OnButton(EventCustom * _event)
 {
     MKInputButton* input = static_cast<MKInputButton*>(_event->getUserData());
 
-    if (!m_Alive)
-    {
-        return;
-    }
+    if (!m_Alive) { return; }
 
     if (input->m_ButtonState != MKInputButton::ButtonState::PRESS)
     {
@@ -441,79 +438,49 @@ void MKPlayer::OnButton(EventCustom * _event)
 void MKPlayer::OnClick(EventCustom * _event)
 {
     MKInputClick* input = static_cast<MKInputClick*>(_event->getUserData());
-    
-    if (!m_Alive)
-    {
-        return;
-    }
 
-    if (input->m_InputName == MinamiKotori::MKInputName::JUMP)
-    {
-        JumpTouchInput(input);
-    }
+    if (!m_Alive) { return; }
 
-    if (input->m_InputName == MinamiKotori::MKInputName::SLIDE)
+    if (input->m_InputName == MinamiKotori::MKInputName::PLAYER_TOUCH_CONTROL)
     {
-        SlideTouchInput(input);
+        PlayerTouchInput(input);
     }
 }
 
 // Player Controls
-void MKPlayer::JumpTouchInput(const MKInputClick*_input)
+void MKPlayer::PlayerTouchInput(const MKInputClick*_input)
 {
     switch (_input->m_ButtonState)
     {
     case MinamiKotori::MKInputButton::ButtonState::PRESS:
-        m_JumpClickStartPosition = _input->m_CursorPosition;
-        m_JumpClickCurrentPosition = _input->m_CursorPosition;
+        m_ClickStartPosition = _input->m_CursorPosition;
+        m_ClickCurrentPosition = _input->m_CursorPosition;
         break;
     case MinamiKotori::MKInputButton::ButtonState::HOLD:
-        // Do nothing.
+        m_ClickCurrentPosition = _input->m_CursorPosition;
         break;
     case MinamiKotori::MKInputButton::ButtonState::RELEASE:
-        {
-            m_JumpClickCurrentPosition = _input->m_CursorPosition;
-            // Ensure that the delta movement of the click is greater than the deadzone.
-            // We only care about the upwards vertical movement.
-            mkF32 movementDelta = m_JumpClickCurrentPosition.GetY() - m_JumpClickStartPosition.GetY();
-            if (movementDelta > 0.0f && MKMathsHelper::Abs(movementDelta) >= m_SwipeDeadZone)
-            {
-                Jump();
-            }
-        }
+        m_ClickReleased = true;
         break;
     default:
-        // Do nothing.
         break;
     }
-}
 
-void MKPlayer::SlideTouchInput(const MKInputClick*_input)
-{
-    switch (_input->m_ButtonState)
+    // Ensure that the delta movement of the click is greater than the deadzone.
+    mkF32 movementDelta = m_ClickCurrentPosition.GetY() - m_ClickStartPosition.GetY();
+    if (MKMathsHelper::Abs(movementDelta) < m_SwipeDeadZone) { return; }
+
+    if (!m_ClickReleased) { return; }
+    m_ClickReleased = false;
+
+    // Decide the action based on the direction of the swipe.
+    if (movementDelta > 0.0f)
     {
-    case MinamiKotori::MKInputButton::ButtonState::PRESS:
-        m_SlideClickStartPosition = _input->m_CursorPosition;
-        m_SlideClickCurrentPosition = _input->m_CursorPosition;
-        break;
-    case MinamiKotori::MKInputButton::ButtonState::HOLD:
-        // Do nothing.
-        break;
-    case MinamiKotori::MKInputButton::ButtonState::RELEASE:
-        {
-            m_SlideClickCurrentPosition = _input->m_CursorPosition;
-            // Ensure that the delta movement of the click is greater than the deadzone.
-            // We only care about the downwards vertical movement.
-            mkF32 movementDelta = m_SlideClickCurrentPosition.GetY() - m_SlideClickStartPosition.GetY();
-            if (movementDelta < 0.0f && MKMathsHelper::Abs(movementDelta) > m_SwipeDeadZone)
-            {
-                Slide();
-            }
-        }
-        break;
-    default:
-        // Do nothing.
-        break;
+        Jump();
+    }
+    else
+    {
+        Slide();
     }
 }
 
