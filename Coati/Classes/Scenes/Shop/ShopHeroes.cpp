@@ -145,7 +145,7 @@ void ShopHeroes::SetHero(MKHeroShopItem* _hero)
     m_Hero = MKSpriteAnimation::Create(_hero->GetPListFile(), _hero->GetJSONFile());
     m_Hero->setScale(desiredHeight / m_Hero->getContentSize().height);
     m_Hero->setPositionX(visibleSize.width * 0.5f);
-    m_Hero->setPositionY(visibleSize.height * 0.1f + m_Hero->getScaledContentSize().height * 0.5f);
+    m_Hero->setPositionY(visibleSize.height * 0.15f + m_Hero->getScaledContentSize().height * 0.5f);
     m_Hero->AddTicketToQueue(MKSpriteAnimationTicket::Create(MKPlayer::RUN_ANIMATION_NAME, 0.5f, MKSpriteAnimationTicket::INFINITE_LOOPS, false));
     m_HeroHook->addChild(m_Hero);
 }

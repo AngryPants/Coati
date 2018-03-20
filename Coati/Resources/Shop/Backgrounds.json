@@ -12,7 +12,7 @@
         },
         {
             "Name" : "Mountains",
-            "Price" : 0,
+            "Price" : 1000,
             "Textures" : [
                 "Textures/Backgrounds/Mountains/Layer_0.png",
                 "Textures/Backgrounds/Mountains/Layer_1.png",
@@ -22,7 +22,7 @@
         },
         {
             "Name" : "Forest",
-            "Price" : 0,
+            "Price" : 3000,
             "Textures" : [
                 "Textures/Backgrounds/Forest/Layer_0.png",
                 "Textures/Backgrounds/Forest/Layer_1.png",
@@ -32,7 +32,7 @@
         },
         {
             "Name" : "Desert",
-            "Price" : 0,
+            "Price" : 5000,
             "Textures" : [
                 "Textures/Backgrounds/Desert/Layer_0.png",
                 "Textures/Backgrounds/Desert/Layer_1.png",

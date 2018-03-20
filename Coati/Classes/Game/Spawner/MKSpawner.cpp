@@ -128,14 +128,16 @@ void MKSpawner::SpawnWave()
     
         obstaclePositionX += obstacleInterval;
     }
-    ++m_WaveCount;
-    m_WaveObstacleCount = MKMathsHelper::Min<mkS32>(m_WaveObstacleCountIncreament + m_WaveObstacleCount, m_WaveObstacleCountMax);
 
     // Powerup Spawning
-    for (mkU32 i = 0; i < MKMathsHelper::RandomInt(m_MinPowerupCount, m_MaxPowerupCount); ++i)
+    mkF32 playDistance = m_WaveEndPositionX - (m_PlayerStartPositionX + m_PlayerDistanceToFirstObstacle);
+    mkF32 powerupSpawnInterval = playDistance / static_cast<mkF32>(m_WaveObstacleCount);
+    mkS32 numPowerups = MKMathsHelper::RandomInt(m_MinPowerupCount, m_MaxPowerupCount);
+    numPowerups = MKMathsHelper::Min(numPowerups, m_WaveObstacleCount / 5);
+    for (mkU32 i = 0; i < numPowerups; ++i)
     {
         PowerupType powerupType = (PowerupType)MKMathsHelper::RandomInt(0, (mkS32)NUM_POWERUP_TYPE);
-        mkF32 powerupPositionX = MKMathsHelper::RandomInt((mkS32)m_PlayerStartPositionX + (mkS32)m_PlayerDistanceToFirstObstacle, (mkS32)m_WaveEndPositionX);
+        mkF32 powerupPositionX = powerupSpawnInterval * static_cast<mkF32>(i) + m_PlayerStartPositionX + m_PlayerDistanceToFirstObstacle;
     
         MKPowerup* powerup = nullptr;
         switch (powerupType)
@@ -149,6 +151,10 @@ void MKSpawner::SpawnWave()
         }
         m_Powerups.push_back(powerup);
     }
+
+    // Update Wave Count & Obstacle Count
+    ++m_WaveCount;
+    m_WaveObstacleCount = MKMathsHelper::Min<mkS32>(m_WaveObstacleCountIncreament + m_WaveObstacleCount, m_WaveObstacleCountMax);
 }
 
 MKObstacle* MKSpawner::SpawnSpike(mkF32 _obstaclePositionX)
@@ -333,7 +339,7 @@ mkBool MKSpawner::init(MKScene* _scene, MKPlayer* _player, mkF32 _playerStartPos
     m_PlayerDistanceToFirstObstacle = MKMathsHelper::Max<mkF32>(_player->GetHorizontalVelocity() * 5.0f, visibleSize.width * 2.0f);
     m_PlayerDistanceFromLastObstacle = visibleSize.width;
 
-    m_MinPowerupCount = 1;
+    m_MinPowerupCount = 0;
     m_MaxPowerupCount = 5;
 
     scheduleUpdate();

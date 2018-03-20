@@ -88,7 +88,7 @@ void Game::InitialisePlayer()
 {
     auto visibleSize = _director->getVisibleSize();
 
-    m_Player = MKPlayer::Create(visibleSize.height * 0.1f, this);
+    m_Player = MKPlayer::Create(visibleSize.height * 0.15f, this);
     m_Player->setPositionX(0.0f);
     m_Player->SetDieCallback(CC_CALLBACK_0(Game::OnPlayerDie, this));
 
@@ -132,7 +132,7 @@ void Game::InitialiseSpawner()
 {
     auto visibleSize = _director->getVisibleSize();
 
-    m_Spawner = MKSpawner::create(this, m_Player, m_Player->getPositionX(), visibleSize.height * 0.1f, visibleSize.height * 0.9f);
+    m_Spawner = MKSpawner::create(this, m_Player, m_Player->getPositionX(), visibleSize.height * 0.15f, visibleSize.height * 0.9f);
     m_Spawner->AddNodeToMoveDuringWaveStart(getDefaultCamera());
     m_Spawner->AddNodeToMoveDuringWaveStart(m_Background);
     addChild(m_Spawner);
