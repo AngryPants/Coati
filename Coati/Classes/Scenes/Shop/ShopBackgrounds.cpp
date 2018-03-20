@@ -128,11 +128,10 @@ void ShopBackgrounds::SetBackground(MKBackgroundShopItem* _background)
 
     // Update Background
     m_Background->removeAllLayers();
-    MK_ASSERT(_background->GetTextureFilesCount() >= 5);
+    MK_ASSERT(_background->GetTextureFilesCount() >= 4);
 
     m_Background->addLayer(MKBackgroundLayer::create(_background->GetTextureFile(0), Vec2(0.0f * visibleSize.width, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(_background->GetTextureFile(1), Vec2(0.1f * visibleSize.width, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(_background->GetTextureFile(2), Vec2(0.2f * visibleSize.width, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(_background->GetTextureFile(3), Vec2(0.3f * visibleSize.width, 0.0f)));
-    m_Background->addLayer(MKBackgroundLayer::create(_background->GetTextureFile(4), Vec2(0.4f * visibleSize.width, 0.0f)));
 }

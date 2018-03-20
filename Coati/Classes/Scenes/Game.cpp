@@ -115,15 +115,14 @@ void Game::InitialiseBackground()
         playerData->SetEquippedBackground(MKBackgroundData::DEFAULT_BACKGROUND_NAME);
     }
     MK_ASSERT(equippedBackground != nullptr);
-    MK_ASSERT(equippedBackground->GetTextureFilesCount() >= 5);
+    MK_ASSERT(equippedBackground->GetTextureFilesCount() >= 4);
 
     m_Background = MKBackground::create();
 
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(0), Vec2(m_Player->GetHorizontalVelocity() * 0.0f, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(1), Vec2(m_Player->GetHorizontalVelocity() * 0.1f, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(2), Vec2(m_Player->GetHorizontalVelocity() * 0.5f, 0.0f)));
-    m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(3), Vec2(m_Player->GetHorizontalVelocity() * 0.7f, 0.0f)));
-    m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(4), Vec2(m_Player->GetHorizontalVelocity() * 1.0f, 0.0f)));
+    m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(3), Vec2(m_Player->GetHorizontalVelocity() * 1.0f, 0.0f)));
 
     m_Background->runAction(RepeatForever::create(MKFollowNodeAction::Create(1.0f, getDefaultCamera(), MinamiKotori::MKFollowNodeAction::ALL)));
     addChild(m_Background, m_Player->getLocalZOrder() - 1);

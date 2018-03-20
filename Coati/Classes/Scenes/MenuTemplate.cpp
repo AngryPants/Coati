@@ -18,7 +18,7 @@ void MenuTemplate::InitialiseBackground()
         playerData->SetEquippedBackground(MKBackgroundData::DEFAULT_BACKGROUND_NAME);
     }
     MK_ASSERT(equippedBackground != nullptr);
-    MK_ASSERT(equippedBackground->GetTextureFilesCount() >= 5);
+    MK_ASSERT(equippedBackground->GetTextureFilesCount() >= 4);
 
     m_Background = MKBackground::create();
 
@@ -26,7 +26,6 @@ void MenuTemplate::InitialiseBackground()
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(1), Vec2(0.0f, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(2), Vec2(0.0f, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(3), Vec2(0.0f, 0.0f)));
-    m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(4), Vec2(0.0f, 0.0f)));
 
     m_Background->runAction(RepeatForever::create(MKFollowNodeAction::Create(1.0f, getDefaultCamera(), MinamiKotori::MKFollowNodeAction::ALL)));
     addChild(m_Background);
