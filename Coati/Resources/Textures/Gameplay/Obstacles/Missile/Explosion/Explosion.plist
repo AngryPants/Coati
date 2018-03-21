@@ -34,66 +34,6 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>Explosion_10</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{256,256}</string>
-                <key>spriteSourceSize</key>
-                <string>{256,256}</string>
-                <key>textureRect</key>
-                <string>{{0,1280},{256,256}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>Explosion_11</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{256,256}</string>
-                <key>spriteSourceSize</key>
-                <string>{256,256}</string>
-                <key>textureRect</key>
-                <string>{{256,1280},{256,256}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>Explosion_12</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{256,256}</string>
-                <key>spriteSourceSize</key>
-                <string>{256,256}</string>
-                <key>textureRect</key>
-                <string>{{0,1536},{256,256}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>Explosion_13</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{256,256}</string>
-                <key>spriteSourceSize</key>
-                <string>{256,256}</string>
-                <key>textureRect</key>
-                <string>{{256,1536},{256,256}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
             <key>Explosion_2</key>
             <dict>
                 <key>aliases</key>
@@ -105,7 +45,7 @@
                 <key>spriteSourceSize</key>
                 <string>{256,256}</string>
                 <key>textureRect</key>
-                <string>{{0,256},{256,256}}</string>
+                <string>{{512,0},{256,256}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -120,7 +60,7 @@
                 <key>spriteSourceSize</key>
                 <string>{256,256}</string>
                 <key>textureRect</key>
-                <string>{{256,256},{256,256}}</string>
+                <string>{{768,0},{256,256}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -135,7 +75,7 @@
                 <key>spriteSourceSize</key>
                 <string>{256,256}</string>
                 <key>textureRect</key>
-                <string>{{0,512},{256,256}}</string>
+                <string>{{0,256},{256,256}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -150,7 +90,7 @@
                 <key>spriteSourceSize</key>
                 <string>{256,256}</string>
                 <key>textureRect</key>
-                <string>{{256,512},{256,256}}</string>
+                <string>{{256,256},{256,256}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -165,7 +105,7 @@
                 <key>spriteSourceSize</key>
                 <string>{256,256}</string>
                 <key>textureRect</key>
-                <string>{{0,768},{256,256}}</string>
+                <string>{{512,256},{256,256}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -180,37 +120,7 @@
                 <key>spriteSourceSize</key>
                 <string>{256,256}</string>
                 <key>textureRect</key>
-                <string>{{256,768},{256,256}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>Explosion_8</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{256,256}</string>
-                <key>spriteSourceSize</key>
-                <string>{256,256}</string>
-                <key>textureRect</key>
-                <string>{{0,1024},{256,256}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>Explosion_9</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{256,256}</string>
-                <key>spriteSourceSize</key>
-                <string>{256,256}</string>
-                <key>textureRect</key>
-                <string>{{256,1024},{256,256}}</string>
+                <string>{{768,256},{256,256}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -226,9 +136,9 @@
             <key>realTextureFileName</key>
             <string>Explosion.png</string>
             <key>size</key>
-            <string>{512,1792}</string>
+            <string>{1024,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ee779becc59352b8e40533383b796a17:9ab9f843b0189abdd1d4122a045b46ff:fe049886709682b4c74f6865e9893d85$</string>
+            <string>$TexturePacker:SmartUpdate:05cf94d5ea4fb696b4af829ee8bc64e4:7444b7780a45b4d1937da5f3fd028802:fe049886709682b4c74f6865e9893d85$</string>
             <key>textureFileName</key>
             <string>Explosion.png</string>
         </dict>
