@@ -49,7 +49,6 @@ void MenuTemplate::InitialiseBackButton()
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 
 	mkF32 buttonHeight = visibleSize.height * 0.1f;
-	mkF32 buttonWidth = buttonHeight;
 	mkF32 buttonPositionX = visibleSize.height * 0.15f;
 	mkF32 buttonPositionY = m_Banner->getPositionY();
 	mkF32 zoomScale = 1.1f;
@@ -69,8 +68,7 @@ void MenuTemplate::InitialiseBackButton()
 	);
 
 	button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
-	button->setScaleX(buttonWidth / button->getNormalTextureSize().width);
-	button->setScaleY(buttonHeight / button->getNormalTextureSize().height);
+	button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
 	this->addChild(button);
 }

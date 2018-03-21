@@ -82,11 +82,10 @@ void ShopTemplate::InitialiseBuyButton()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
 
-    mkF32 fontSize = visibleSize.height * 0.03f;
     mkF32 buttonHeight = visibleSize.height * 0.1f;
-    mkF32 buttonWidth = buttonHeight * 3.0f;
     mkF32 buttonPositionX = visibleSize.width * 0.5f;
     mkF32 buttonPositionY = visibleSize.height * 0.2f;
+    mkF32 fontSize = buttonHeight;
     mkString buttonNormalTexture = "Textures/UI/Buttons/Menu/Button_Normal.png";
     mkString buttonSelectedTexture = "Textures/UI/Buttons/Menu/Button_Selected.png";
     mkString buttonDisabledTexture = "Textures/UI/Buttons/Menu/Button_Disabled.png";
@@ -98,13 +97,12 @@ void ShopTemplate::InitialiseBuyButton()
         buttonNormalTexture,
         buttonSelectedTexture,
         buttonDisabledTexture,
-        MKUIHelper::DEFAULT_BUTTON_ZOOM_SCALE,
+        MKUIHelper::DEFAULT_ZOOM_SCALE,
         [=](Ref*) -> void { BuyCurrentItem(); }
     );
     
     m_BuyButton->setPosition(Vec2(buttonPositionX, buttonPositionY));
-    m_BuyButton->setScaleX(buttonWidth / m_BuyButton->getNormalTextureSize().width);
-    m_BuyButton->setScaleY(buttonHeight / m_BuyButton->getNormalTextureSize().height);
+    m_BuyButton->setScale(buttonHeight / m_BuyButton->getNormalTextureSize().height);
     
     m_BuyButton->retain();
 }
@@ -128,11 +126,10 @@ void ShopTemplate::InitialiseEquipButton()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
 
-    mkF32 fontSize = visibleSize.height * 0.03f;
     mkF32 buttonHeight = visibleSize.height * 0.1f;
-    mkF32 buttonWidth = buttonHeight * 3.0f;
     mkF32 buttonPositionX = visibleSize.width * 0.5f;
     mkF32 buttonPositionY = visibleSize.height * 0.2f;
+    mkF32 fontSize = buttonHeight;
     mkString buttonNormalTexture = "Textures/UI/Buttons/Menu/Button_Normal.png";
     mkString buttonSelectedTexture = "Textures/UI/Buttons/Menu/Button_Selected.png";
     mkString buttonDisabledTexture = "Textures/UI/Buttons/Menu/Button_Disabled.png";
@@ -144,13 +141,12 @@ void ShopTemplate::InitialiseEquipButton()
         buttonNormalTexture,
         buttonSelectedTexture,
         buttonDisabledTexture,
-        MKUIHelper::DEFAULT_BUTTON_ZOOM_SCALE,
+        MKUIHelper::DEFAULT_ZOOM_SCALE,
         [=](Ref*) -> void { EquipCurrentItem(); }
     );
 
     m_EquipButton->setPosition(Vec2(buttonPositionX, buttonPositionY));
-    m_EquipButton->setScaleX(buttonWidth / m_EquipButton->getNormalTextureSize().width);
-    m_EquipButton->setScaleY(buttonHeight / m_EquipButton->getNormalTextureSize().height);
+    m_EquipButton->setScale(buttonHeight / m_EquipButton->getNormalTextureSize().height);
 
     m_EquipButton->retain();
 }
@@ -249,12 +245,11 @@ void ShopTemplate::InitialisePreviousItemButton()
     auto visibleSize = Director::getInstance()->getVisibleSize();
 
     mkF32 buttonHeight = visibleSize.height * 0.2f;
-    mkF32 buttonWidth = buttonHeight;
     mkF32 buttonPositionX = visibleSize.height * 0.2f;
     mkF32 buttonPositionY = visibleSize.height * 0.5f;
-    mkString buttonNormalTexture = "Textures/UI/Buttons/Arrow/Button_Normal.png";
-    mkString buttonSelectedTexture = "Textures/UI/Buttons/Arrow/Button_Selected.png";
-    mkString buttonDisabledTexture = "Textures/UI/Buttons/Arrow/Button_Disabled.png";
+    mkString buttonNormalTexture = "Textures/UI/Buttons/Arrow/Left/Button_Normal.png";
+    mkString buttonSelectedTexture = "Textures/UI/Buttons/Arrow/Left/Button_Selected.png";
+    mkString buttonDisabledTexture = "Textures/UI/Buttons/Arrow/Left/Button_Disabled.png";
 
     auto button = MKUIHelper::CreateButton(
         "",
@@ -263,14 +258,12 @@ void ShopTemplate::InitialisePreviousItemButton()
         buttonNormalTexture,
         buttonSelectedTexture,
         buttonDisabledTexture,
-        MKUIHelper::DEFAULT_BUTTON_ZOOM_SCALE,
+        MKUIHelper::DEFAULT_ZOOM_SCALE,
         [=](Ref*) -> void { SelectPreviousItem(); }
     );
 
     button->setPosition(Vec2(buttonPositionX, buttonPositionY));
-    button->setScaleX(buttonWidth / button->getNormalTextureSize().width);
-    button->setScaleY(buttonHeight / button->getNormalTextureSize().height);
-    button->setRotation(180.0f);
+    button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
     addChild(button);
 }
@@ -280,12 +273,11 @@ void ShopTemplate::InitialiseNextItemButton()
     auto visibleSize = Director::getInstance()->getVisibleSize();
 
     mkF32 buttonHeight = visibleSize.height * 0.2f;
-    mkF32 buttonWidth = buttonHeight;
     mkF32 buttonPositionX = visibleSize.width - visibleSize.height * 0.2f;
     mkF32 buttonPositionY = visibleSize.height * 0.5f;
-    mkString buttonNormalTexture = "Textures/UI/Buttons/Arrow/Button_Normal.png";
-    mkString buttonSelectedTexture = "Textures/UI/Buttons/Arrow/Button_Selected.png";
-    mkString buttonDisabledTexture = "Textures/UI/Buttons/Arrow/Button_Disabled.png";
+    mkString buttonNormalTexture = "Textures/UI/Buttons/Arrow/Right/Button_Normal.png";
+    mkString buttonSelectedTexture = "Textures/UI/Buttons/Arrow/Right/Button_Selected.png";
+    mkString buttonDisabledTexture = "Textures/UI/Buttons/Arrow/Right/Button_Disabled.png";
 
     auto button = MKUIHelper::CreateButton(
         "",
@@ -294,13 +286,12 @@ void ShopTemplate::InitialiseNextItemButton()
         buttonNormalTexture,
         buttonSelectedTexture,
         buttonDisabledTexture,
-        MKUIHelper::DEFAULT_BUTTON_ZOOM_SCALE,
+        MKUIHelper::DEFAULT_ZOOM_SCALE,
         [=](Ref*) -> void { SelectNextItem(); }
     );
 
     button->setPosition(Vec2(buttonPositionX, buttonPositionY));
-    button->setScaleX(buttonWidth / button->getNormalTextureSize().width);
-    button->setScaleY(buttonHeight / button->getNormalTextureSize().height);
+    button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
     addChild(button);
 }

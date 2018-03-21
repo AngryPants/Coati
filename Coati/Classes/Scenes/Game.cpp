@@ -174,7 +174,6 @@ void Game::CreateGameplayUI()
     // Pause Button
     {
         mkF32 buttonHeight = visibleSize.height * 0.1f;
-        mkF32 buttonWidth = buttonHeight;
         mkF32 buttonPositionX = visibleSize.height * 0.15f;
         mkF32 buttonPositionY = visibleSize.height * 0.85f;
         mkF32 zoomScale = 1.1f;
@@ -194,8 +193,7 @@ void Game::CreateGameplayUI()
         );
     
         button->setPosition(Vec2(buttonPositionX, buttonPositionY));
-        button->setScaleX(buttonWidth / button->getContentSize().width);
-        button->setScaleY(buttonHeight / button->getContentSize().height);
+        button->setScale(buttonHeight / button->getContentSize().height);
         m_GameplayUINode->addChild(button);
     }
     
@@ -226,10 +224,9 @@ void Game::CreatePauseUI()
         mkF32 buttonPositionX = visibleSize.height * 0.6f;
         mkF32 buttonPositionY = visibleSize.height * 0.5f;
         mkF32 buttonHeight = visibleSize.height * 0.5f;
-        mkF32 buttonWidth = buttonHeight;
-        mkString buttonNormalTexture = "Textures/UI/Buttons/Resume/Button_Normal.png";
-        mkString buttonSelectedTexture = "Textures/UI/Buttons/Resume/Button_Selected.png";
-        mkString buttonDisabledTexture = "Textures/UI/Buttons/Resume/Button_Disabled.png";
+        mkString buttonNormalTexture = "Textures/UI/Buttons/Play/Button_Normal.png";
+        mkString buttonSelectedTexture = "Textures/UI/Buttons/Play/Button_Selected.png";
+        mkString buttonDisabledTexture = "Textures/UI/Buttons/Play/Button_Disabled.png";
 
         cocos2d::ui::Button* button = MKUIHelper::CreateButton(
             "",
@@ -243,8 +240,7 @@ void Game::CreatePauseUI()
         );
 
         button->setPosition(Vec2(buttonPositionX, buttonPositionY));
-        button->setScaleX(buttonWidth / button->getContentSize().width);
-        button->setScaleY(buttonHeight / button->getContentSize().height);
+        button->setScale(buttonHeight / button->getContentSize().height);
 
         m_PauseUINode->addChild(button);
     }
@@ -254,7 +250,6 @@ void Game::CreatePauseUI()
         mkF32 buttonPositionX =  visibleSize.width - visibleSize.height * 0.6f;
         mkF32 buttonPositionY = visibleSize.height * 0.5f;
         mkF32 buttonHeight = visibleSize.height * 0.5f;
-        mkF32 buttonWidth = buttonHeight;
         mkString buttonNormalTexture = "Textures/UI/Buttons/Quit/Button_Normal.png";
         mkString buttonSelectedTexture = "Textures/UI/Buttons/Quit/Button_Selected.png";
         mkString buttonDisabledTexture = "Textures/UI/Buttons/Quit/Button_Disabled.png";
@@ -274,8 +269,7 @@ void Game::CreatePauseUI()
         );
 
         button->setPosition(Vec2(buttonPositionX, buttonPositionY));
-        button->setScaleX(buttonWidth / button->getContentSize().width);
-        button->setScaleY(buttonHeight / button->getContentSize().height);
+        button->setScale(buttonHeight / button->getContentSize().height);
 
         m_PauseUINode->addChild(button);
     }
@@ -337,7 +331,6 @@ void Game::CreateGameOverUI()
         mkF32 buttonPositionX = visibleSize.height * 0.6f;
         mkF32 buttonPositionY = visibleSize.height * 0.5f;
         mkF32 buttonHeight = visibleSize.height * 0.5f;
-        mkF32 buttonWidth = buttonHeight;
         mkString buttonNormalTexture = "Textures/UI/Buttons/Retry/Button_Normal.png";
         mkString buttonSelectedTexture = "Textures/UI/Buttons/Retry/Button_Selected.png";
         mkString buttonDisabledTexture = "Textures/UI/Buttons/Retry/Button_Disabled.png";
@@ -357,8 +350,7 @@ void Game::CreateGameOverUI()
         );
 
         button->setPosition(Vec2(buttonPositionX, buttonPositionY));
-        button->setScaleX(buttonWidth / button->getContentSize().width);
-        button->setScaleY(buttonHeight / button->getContentSize().height);
+        button->setScale(buttonHeight / button->getContentSize().height);
 
         m_GameOverUINode->addChild(button);
     }
@@ -368,7 +360,6 @@ void Game::CreateGameOverUI()
         mkF32 buttonPositionX = visibleSize.width - visibleSize.height * 0.6f;
         mkF32 buttonPositionY = visibleSize.height * 0.5f;
         mkF32 buttonHeight = visibleSize.height * 0.5f;
-        mkF32 buttonWidth = buttonHeight;
         mkString buttonNormalTexture = "Textures/UI/Buttons/Quit/Button_Normal.png";
         mkString buttonSelectedTexture = "Textures/UI/Buttons/Quit/Button_Selected.png";
         mkString buttonDisabledTexture = "Textures/UI/Buttons/Quit/Button_Disabled.png";
@@ -388,8 +379,7 @@ void Game::CreateGameOverUI()
         );
 
         button->setPosition(Vec2(buttonPositionX, buttonPositionY));
-        button->setScaleX(buttonWidth / button->getContentSize().width);
-        button->setScaleY(buttonHeight / button->getContentSize().height);
+        button->setScale(buttonHeight / button->getContentSize().height);
 
         m_GameOverUINode->addChild(button);
     }

@@ -8,7 +8,7 @@ class ShopTemplate : public MenuTemplate
 
 protected:
     Color4B m_InsufficientCoinsColor = Color4B::RED;
-    Color4B m_SufficientCoinsColor = Color4B::GREEN;
+    Color4B m_SufficientCoinsColor = Color4B(0, 200, 0, 255);
 
     // Wallet
     MKSprite* m_WalletCoinIcon = nullptr;

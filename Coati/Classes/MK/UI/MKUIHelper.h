@@ -28,7 +28,7 @@ private:
 public:
 	// Variable(s)
 	static const mkString DEFAULT_FONT;
-    static const mkF32 DEFAULT_BUTTON_ZOOM_SCALE;
+    static const mkF32 DEFAULT_ZOOM_SCALE;
 
 	// Create Label
 	static Label* CreateLabel(
@@ -67,7 +67,7 @@ public:
 		const mkString& _normalTexture,
 		const mkString& _selectedTexture,
 		const mkString& _disabledTexture,
-		mkF32 _zoomScale = DEFAULT_BUTTON_ZOOM_SCALE,
+		mkF32 _zoomScale = DEFAULT_ZOOM_SCALE,
 		const std::function<void(Ref*)>& _callback = nullptr)
 	{
 		// Create Label
@@ -77,6 +77,7 @@ public:
 		auto button = ui::Button::create(_normalTexture, _selectedTexture, _disabledTexture);
 		button->setTitleLabel(label);
 		button->setZoomScale(_zoomScale);
+        // button->setPressedActionEnabled(true);
 
 		// Set click callback.
         if (_callback != nullptr)
@@ -94,7 +95,7 @@ public:
 		const mkString& _ballNormalTexture,
 		const mkString& _ballSelectedTexture,
 		const mkString& _ballDisabledTexture,
-		mkF32 _zoomScale = 1.1f,
+		mkF32 _zoomScale = DEFAULT_ZOOM_SCALE,
 		const std::function<void(Ref*, ui::Slider::EventType)>& _callback = nullptr)
 	{
 		auto slider = ui::Slider::create();

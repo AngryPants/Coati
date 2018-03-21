@@ -113,7 +113,7 @@ protected:
     MK_DECL_DEINITIALISE_INPUT(MKPlayer);
 
     // Player Controls
-    mkF32 m_SwipeDeadZone = 0.4f;
+    mkF32 m_SwipeDeadZone = 0.2f;
 
     MKCursorPosition m_ClickStartPosition;
     MKCursorPosition m_ClickCurrentPosition;

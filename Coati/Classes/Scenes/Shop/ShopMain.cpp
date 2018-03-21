@@ -23,8 +23,7 @@ void ShopMain::InitialiseButtons()
 	auto visibleSize = Director::getInstance()->getVisibleSize();
 
 	mkF32 zoomScale = 1.1f;
-	mkF32 buttonHeight = visibleSize.height * 0.3f;
-	mkF32 buttonWidth = buttonHeight;
+	mkF32 buttonHeight = visibleSize.height * 0.4f;
 
     // Buy Heroes
     {
@@ -39,9 +38,8 @@ void ShopMain::InitialiseButtons()
             [](Ref*) -> void { MKSceneManager::GetInstance()->PushScene("ShopHeroes"); }
         );
 
-        button->setPosition(cocos2d::Vec2(visibleSize.height * 0.5f, visibleSize.height * 0.5f));
-        button->setScaleX(buttonWidth / button->getNormalTextureSize().width);
-        button->setScaleY(buttonHeight / button->getNormalTextureSize().height);
+        button->setPosition(cocos2d::Vec2(visibleSize.width * 0.5f - visibleSize.height * 0.3f, visibleSize.height * 0.5f));
+        button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
         this->addChild(button);
     }
@@ -59,9 +57,8 @@ void ShopMain::InitialiseButtons()
 			[](Ref*) -> void { MKSceneManager::GetInstance()->PushScene("ShopBackgrounds"); }
 		);
 
-		button->setPosition(cocos2d::Vec2(visibleSize.width - visibleSize.height * 0.5f, visibleSize.height * 0.5f));
-		button->setScaleX(buttonWidth / button->getNormalTextureSize().width);
-		button->setScaleY(buttonHeight / button->getNormalTextureSize().height);
+        button->setPosition(cocos2d::Vec2(visibleSize.width * 0.5f + visibleSize.height * 0.3f, visibleSize.height * 0.5f));
+		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
 		this->addChild(button);
 	}

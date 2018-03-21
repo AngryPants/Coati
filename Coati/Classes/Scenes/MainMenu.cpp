@@ -21,29 +21,25 @@ bool MainMenu::init()
 void MainMenu::InitialiseButtons()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
-    auto visibleOrigin = Director::getInstance()->getVisibleOrigin();
-
-	mkF32 fontSize = visibleSize.height * 0.03f;
-	mkF32 zoomScale = 1.1f;
-	mkF32 buttonHeight = visibleSize.height * 0.1f;
-	mkF32 buttonWidth = buttonHeight * 3.0f;
-	mkF32 buttonPositionX = visibleSize.width * 0.5f + visibleOrigin.x;
-	mkF32 buttonPositionY = visibleSize.height * 0.6f + visibleOrigin.y;
-	mkString buttonNormalTexture = "Textures/UI/Buttons/Menu/Button_Normal.png";
-	mkString buttonSelectedTexture = "Textures/UI/Buttons/Menu/Button_Selected.png";
-	mkString buttonDisabledTexture = "Textures/UI/Buttons/Menu/Button_Disabled.png";
-	mkU32 buttonCount = 0;
 
 	// Play
 	{
+        mkString buttonNormalTexture = "Textures/UI/Buttons/Play/Button_Normal.png";
+        mkString buttonSelectedTexture = "Textures/UI/Buttons/Play/Button_Selected.png";
+        mkString buttonDisabledTexture = "Textures/UI/Buttons/Play/Button_Disabled.png";
+
+        mkF32 buttonHeight = visibleSize.height * 0.4f;
+        mkF32 buttonPositionX = visibleSize.width * 0.5f;
+        mkF32 buttonPositionY = visibleSize.height * 0.6f;
+
 		auto button = MKUIHelper::CreateButton(
-			"Play",
-			fontSize,
+			"",
+			0.0f,
 			MKUIHelper::DEFAULT_FONT,
 			buttonNormalTexture,
 			buttonSelectedTexture,
 			buttonDisabledTexture,
-			zoomScale,
+			MKUIHelper::DEFAULT_ZOOM_SCALE,
 			[=](Ref*) -> void
             {
                 StopBGM();
@@ -51,66 +47,84 @@ void MainMenu::InitialiseButtons()
             }
 		);
 
-		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY - buttonHeight * (mkF32)buttonCount));
-		button->setScaleX(buttonWidth / button->getNormalTextureSize().width);
-		button->setScaleY(buttonHeight / button->getNormalTextureSize().height);
+		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
+		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
 		this->addChild(button);
-		++buttonCount;
 	}
     
 	// Settings
 	{
+        mkF32 buttonHeight = visibleSize.height * 0.2f;
+        mkF32 buttonPositionX = visibleSize.width * 0.5f - visibleSize.height * 0.3f;
+        mkF32 buttonPositionY = visibleSize.height * 0.25f;
+
+        mkString buttonNormalTexture = "Textures/UI/Buttons/Settings/Button_Normal.png";
+        mkString buttonSelectedTexture = "Textures/UI/Buttons/Settings/Button_Selected.png";
+        mkString buttonDisabledTexture = "Textures/UI/Buttons/Settings/Button_Disabled.png";
+
 		auto button = MKUIHelper::CreateButton(
-			"Settings",
-			fontSize,
+			"",
+			0.0f,
 			MKUIHelper::DEFAULT_FONT, 
 			buttonNormalTexture,
 			buttonSelectedTexture,
 			buttonDisabledTexture,
-			zoomScale,
+            MKUIHelper::DEFAULT_ZOOM_SCALE,
 			[](Ref*) -> void { MKSceneManager::GetInstance()->PushScene("Settings"); }
 		);
 
-		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY - buttonHeight * (mkF32)buttonCount));
-		button->setScaleX(buttonWidth / button->getNormalTextureSize().width);
-		button->setScaleY(buttonHeight / button->getNormalTextureSize().height);
+		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
+		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
 		this->addChild(button);
-		++buttonCount;
 	}
     
 	// Shop
 	{
+        mkF32 buttonHeight = visibleSize.height * 0.2f;
+        mkF32 buttonPositionX = visibleSize.width * 0.5f;
+        mkF32 buttonPositionY = visibleSize.height * 0.25f;
+
+        mkString buttonNormalTexture = "Textures/UI/Buttons/Shop/Button_Normal.png";
+        mkString buttonSelectedTexture = "Textures/UI/Buttons/Shop/Button_Selected.png";
+        mkString buttonDisabledTexture = "Textures/UI/Buttons/Shop/Button_Disabled.png";
+
 		auto button = MKUIHelper::CreateButton(
-			"Shop",
-			fontSize,
+			"",
+			0.0f,
 			MKUIHelper::DEFAULT_FONT,
 			buttonNormalTexture,
 			buttonSelectedTexture,
 			buttonDisabledTexture,
-			zoomScale,
+            MKUIHelper::DEFAULT_ZOOM_SCALE,
 			[](Ref*) -> void { MKSceneManager::GetInstance()->PushScene("ShopMain"); }
 		);
 
-		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY - buttonHeight * (mkF32)buttonCount));
-		button->setScaleX(buttonWidth / button->getNormalTextureSize().width);
-		button->setScaleY(buttonHeight / button->getNormalTextureSize().height);
+		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
+		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
 		this->addChild(button);
-		++buttonCount;
 	}
 
     // Quit
-	{
+    {
+        mkF32 buttonHeight = visibleSize.height * 0.2f;
+        mkF32 buttonPositionX = visibleSize.width * 0.5f + visibleSize.height * 0.3f;
+        mkF32 buttonPositionY = visibleSize.height * 0.25f;
+
+        mkString buttonNormalTexture = "Textures/UI/Buttons/Quit/Button_Normal.png";
+        mkString buttonSelectedTexture = "Textures/UI/Buttons/Quit/Button_Selected.png";
+        mkString buttonDisabledTexture = "Textures/UI/Buttons/Quit/Button_Disabled.png";
+
 		auto button = MKUIHelper::CreateButton(
-			"Quit",
-			fontSize,
+			"",
+			0.0f,
 			MKUIHelper::DEFAULT_FONT,
 			buttonNormalTexture,
 			buttonSelectedTexture,
 			buttonDisabledTexture,
-			zoomScale,
+            MKUIHelper::DEFAULT_ZOOM_SCALE,
 			[=](Ref*) -> void
 			{
                 StopBGM();
@@ -123,12 +137,10 @@ void MainMenu::InitialiseButtons()
 			}
 		);
 
-		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY - buttonHeight * (mkF32)buttonCount));
-		button->setScaleX(buttonWidth / button->getNormalTextureSize().width);
-		button->setScaleY(buttonHeight / button->getNormalTextureSize().height);
+		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
+		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
 		this->addChild(button);
-		++buttonCount;
 	}
 }
 

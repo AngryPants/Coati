@@ -74,14 +74,12 @@ void StartScreen::InitialiseUI()
 void StartScreen::InitialiseLogo()
 {
     Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 visibleOrigin = Director::getInstance()->getVisibleOrigin();
     
     Size desiredSize(visibleSize.height * 0.75f, visibleSize.height * 0.375f);
     MKSprite* logo = MKSprite::CreateWithFile("Textures/UI/Logo.png", MKSprite::REPEAT);
-    logo->setScaleX(desiredSize.width / logo->getContentSize().width);
-    logo->setScaleY(desiredSize.height / logo->getContentSize().height);
+    logo->setScale(desiredSize.height / logo->getContentSize().height);
     logo->setAnchorPoint(Vec2(0.5f, 1.0f));
-    logo->setPosition(Vec2(visibleOrigin.x + visibleSize.width * 0.5f, visibleSize.height * 0.8f));
+    logo->setPosition(Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.8f));
 
     this->addChild(logo);
 }
@@ -89,13 +87,12 @@ void StartScreen::InitialiseLogo()
 void StartScreen::InitialiseStartLabel()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
-    auto visibleOrigin = Director::getInstance()->getVisibleOrigin();
     
     float fontSize = visibleSize.height * 0.05f;
 	cocos2d::Color4B fontColor = cocos2d::Color4B::BLACK;
 
-	cocos2d::Label* label = MKUIHelper::CreateLabel("Touch screen to start.", fontSize);
-    label->setPosition(cocos2d::Vec2(visibleOrigin.x + visibleSize.width * 0.5f, visibleSize.height * 0.25f));
+	cocos2d::Label* label = MKUIHelper::CreateLabel("TOUCH SCREEN TO START", fontSize);
+    label->setPosition(cocos2d::Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.3f));
     label->setTextColor(fontColor);
 
     this->addChild(label);

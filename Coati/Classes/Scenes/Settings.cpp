@@ -45,7 +45,6 @@ void Settings::onExit()
 void Settings::InitialiseVolumeControls()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
-    auto visibleOrigin = Director::getInstance()->getVisibleOrigin();
 
     mkS32 sliderCount = 0;
     mkF32 sliderSpacing = visibleSize.height * 0.18f;
@@ -53,7 +52,7 @@ void Settings::InitialiseVolumeControls()
     // Label
     mkF32 fontSize = visibleSize.height * 0.05f;
     cocos2d::Color4B fontColor = cocos2d::Color4B::BLACK;
-    cocos2d::Vec2 labelPosition(visibleOrigin.x + visibleSize.width * 0.5f, visibleOrigin.y + visibleSize.height * 0.65f);
+    cocos2d::Vec2 labelPosition(visibleSize.width * 0.5f, visibleSize.height * 0.65f);
 
     // Slider
     mkString barTexture = "Textures/UI/Slider/Menu/Slider_Bar_Normal.png";
@@ -64,7 +63,7 @@ void Settings::InitialiseVolumeControls()
     mkF32 sliderHeight = visibleSize.height * 0.05f;
     mkF32 sliderWidth = sliderHeight * 10.0f;
     mkF32 zoomScale = 1.1f;
-    cocos2d::Vec2 sliderPosition(visibleOrigin.x + visibleSize.width * 0.5f, visibleOrigin.y + visibleSize.height * 0.55f);
+    cocos2d::Vec2 sliderPosition(visibleSize.width * 0.5f, visibleSize.height * 0.55f);
 
     // Master Volume Control
     {
