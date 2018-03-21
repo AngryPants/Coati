@@ -16,6 +16,17 @@ class Game : public MKScene
 	typedef MKScene Super;
 
 private:
+    // Sound Names(s)
+    const mkString m_BGMSoundName = "Game_BGM";
+
+    // Sound IDs
+    mkS32 m_BGMSoundId = MKAudioManager::INVALID_SOUND_ID;
+
+    void StartBGM();
+    void PauseBGM();
+    void ResumeBGM();
+    void StopBGM();
+
     // Variable(s)
     MKPlayer* m_Player = nullptr;
     MKBackground* m_Background = nullptr;

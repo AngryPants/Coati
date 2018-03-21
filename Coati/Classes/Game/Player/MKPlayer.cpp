@@ -19,9 +19,7 @@ const mkString MKPlayer::SHIELD_REMOVE_SOUND_NAME = "Shield_Remove";
 
 // Animation State Names
 const mkString MKPlayer::RUN_ANIMATION_NAME = "Run";
-const mkString MKPlayer::JUMP_START_ANIMATION_NAME = "Jump_Start";
-const mkString MKPlayer::JUMP_LOOP_ANIMATION_NAME = "Jump_Loop";
-const mkString MKPlayer::JUMP_END_ANIMATION_NAME = "Jump_End";
+const mkString MKPlayer::JUMP_ANIMATION_NAME = "Jump";
 const mkString MKPlayer::SLIDE_ANIMATION_NAME = "Slide";
 const mkString MKPlayer::DIE_ANIMATION_NAME = "Die";
 
@@ -83,9 +81,7 @@ void MKPlayer::PlayRunAnimation()
 void MKPlayer::PlayJumpAnimation()
 {
     ClearAllTickets();
-    AddTicketToQueue(MKSpriteAnimationTicket::Create(JUMP_START_ANIMATION_NAME, m_JumpDuration * 0.2f, 1, false));
-    AddTicketToQueue(MKSpriteAnimationTicket::Create(JUMP_LOOP_ANIMATION_NAME, m_JumpDuration * 0.6f, 1, false));
-    AddTicketToQueue(MKSpriteAnimationTicket::Create(JUMP_END_ANIMATION_NAME, m_JumpDuration * 0.2f, MKSpriteAnimationTicket::INFINITE_LOOPS, false));
+    AddTicketToQueue(MKSpriteAnimationTicket::Create(JUMP_ANIMATION_NAME, m_JumpDuration, 1, false));
 }
 
 void MKPlayer::PlaySlideAnimation()

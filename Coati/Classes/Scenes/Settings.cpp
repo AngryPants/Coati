@@ -26,8 +26,8 @@ void Settings::onEnter()
     Super::onEnter();
 
     // Play Sounds
-    m_BGMSoundId = MKAudioManager::GetInstance()->PlaySound(m_BGMSoundName, MKSound::SoundType::BGM, 1.0f, true, [](mkS32 _soundId, const mkString& _fileLocation) -> void { CCLOG("Setttings BGM Finish Playing Callback"); });
-    m_SFXSoundId = MKAudioManager::GetInstance()->PlaySound(m_SFXSoundName, MKSound::SoundType::SFX, 1.0f, true, [](mkS32 _soundId, const mkString& _fileLocation) -> void { CCLOG("Setttings SFX Finish Playing Callback"); });
+    // m_BGMSoundId = MKAudioManager::GetInstance()->PlaySound(m_BGMSoundName, MKSound::SoundType::BGM, 1.0f, true, [](mkS32 _soundId, const mkString& _fileLocation) -> void { CCLOG("Setttings BGM Finish Playing Callback"); });
+    // m_SFXSoundId = MKAudioManager::GetInstance()->PlaySound(m_SFXSoundName, MKSound::SoundType::SFX, 1.0f, true, [](mkS32 _soundId, const mkString& _fileLocation) -> void { CCLOG("Setttings SFX Finish Playing Callback"); });
 }
 
 void Settings::onExit()
@@ -35,10 +35,10 @@ void Settings::onExit()
     Super::onExit();
 
     // Stop Sounds
-    MKAudioManager::GetInstance()->StopSound(m_BGMSoundId);
-    MKAudioManager::GetInstance()->StopSound(m_SFXSoundId);
-    m_BGMSoundId = MKAudioManager::INVALID_SOUND_ID;
-    m_SFXSoundId = MKAudioManager::INVALID_SOUND_ID;
+    // MKAudioManager::GetInstance()->StopSound(m_BGMSoundId);
+    // m_BGMSoundId = MKAudioManager::INVALID_SOUND_ID;
+    // MKAudioManager::GetInstance()->StopSound(m_SFXSoundId);
+    // m_SFXSoundId = MKAudioManager::INVALID_SOUND_ID;
     MKAudioManager::GetInstance()->SaveVolumes();
 }
 

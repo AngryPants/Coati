@@ -1,0 +1,58 @@
+{
+  "States": [
+    {
+      "Name": "Run",
+      "Frames": [
+        "Larry_Run_0",
+        "Larry_Run_1",
+        "Larry_Run_2",
+        "Larry_Run_3",
+        "Larry_Run_4",
+        "Larry_Run_5",
+        "Larry_Run_6",
+        "Larry_Run_7",
+        "Larry_Run_8",
+        "Larry_Run_9"
+      ]
+    },
+    {
+      "Name": "Slide",
+      "Frames": [
+        "Larry_Slide_0",
+        "Larry_Slide_1",
+        "Larry_Slide_2",
+        "Larry_Slide_3",
+        "Larry_Slide_4",
+        "Larry_Slide_5"
+      ]
+    },
+    {
+      "Name": "Jump",
+      "Frames": [
+        "Larry_Jump_0",
+        "Larry_Jump_1",
+        "Larry_Jump_2",
+        "Larry_Jump_3",
+        "Larry_Jump_4",
+        "Larry_Jump_5"
+      ]
+    },
+    {
+      "Name": "Die",
+      "Frames": [
+        "Larry_Die_0",
+        "Larry_Die_1",
+        "Larry_Die_2",
+        "Larry_Die_3",
+        "Larry_Die_4",
+        "Larry_Die_5",
+        "Larry_Die_6",
+        "Larry_Die_7",
+        "Larry_Die_8",
+        "Larry_Die_9",
+        "Larry_Die_10",
+        "Larry_Die_11"
+      ]
+    }
+  ]
+}

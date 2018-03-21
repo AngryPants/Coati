@@ -5,7 +5,7 @@
 NS_MK_BEGIN
 
 // Name of the default background.
-const mkString MKBackgroundData::DEFAULT_BACKGROUND_NAME = "Default";
+const mkString MKBackgroundData::DEFAULT_BACKGROUND_NAME = "Mountains";
 
 // JSON Data Name(s)
 const mkString MKBackgroundData::BACKGROUND_ARRAY_JSON_DATA_NAME = "Backgrounds";

@@ -1,17 +1,14 @@
 {
 	"Sounds": [
 		{
-			"Name": "Settings_BGM",
-			"File_Location": "Audio/Settings/BGM.mp3"
+			"Name": "Menu_BGM",
+			"File_Location": "Audio/BGM/Blue_Surprise_NES.mp3"
 		},
 		{
-			"Name": "Settings_SFX",
-			"File_Location": "Audio/Settings/SFX.mp3"
+			"Name": "Game_BGM",
+			"File_Location": "Audio/BGM/8bit_Melody.mp3"
 		},
-		{
-			"Name": "BGM_City",
-			"File_Location": "Audio/BGM/City.mp3"
-		},
+
 		{
 			"Name": "Slide",
 			"File_Location": "Audio/Player/Slide.mp3"
@@ -20,6 +17,7 @@
 			"Name": "Jump",
 			"File_Location": "Audio/Player/Jump.mp3"
 		},
+
 		{
 			"Name": "Missile_Warning",
 			"File_Location": "Audio/Obstacles/Missile/Missile_Warning.mp3"
@@ -32,6 +30,7 @@
 			"Name": "Missile_Explosion",
 			"File_Location": "Audio/Obstacles/Missile/Missile_Explosion.mp3"
 		},
+
 		{
 			"Name": "Laser_Charging",
 			"File_Location": "Audio/Obstacles/Laser/Laser_Charging.mp3"
@@ -44,6 +43,7 @@
 			"Name": "Laser_Explosion",
 			"File_Location": "Audio/Obstacles/Laser/Laser_Explosion.mp3"
 		},
+
 		{
 			"Name": "Saw_Spinning",
 			"File_Location": "Audio/Obstacles/Saw/Saw_Spinning.mp3"
@@ -56,6 +56,7 @@
 			"Name": "Saw_Explosion",
 			"File_Location": "Audio/Obstacles/Saw/Saw_Explosion.mp3"
 		},
+		
 		{
 			"Name": "Spike_Hit",
 			"File_Location": "Audio/Obstacles/Spike/Spike_Hit.mp3"
@@ -64,6 +65,7 @@
 			"Name": "Spike_Explosion",
 			"File_Location": "Audio/Obstacles/Spike/Spike_Explosion.mp3"
 		},
+
 		{
 			"Name": "Shield_Add",
 			"File_Location": "Audio/PowerUps/Shield/Shield_Add.mp3"

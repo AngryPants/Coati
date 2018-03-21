@@ -1,16 +1,16 @@
 {
     "Heroes" : [
         {
-            "Name" : "Default",
+            "Name" : "Larry",
             "Price" : 0,
-            "PList" : "Textures/Gameplay/Player/Default/PList.plist",
-            "JSON" : "Textures/Gameplay/Player/Default/States.json"
+            "PList" : "Textures/Gameplay/Heroes/Larry/Larry.plist",
+            "JSON" : "Textures/Gameplay/Heroes/Larry/States.json"
         },
         {
-            "Name" : "Green",
+            "Name" : "Rika",
             "Price" : 1000,
-            "PList" : "Textures/Gameplay/Player/Green/PList.plist",
-            "JSON" : "Textures/Gameplay/Player/Green/States.json"
+            "PList" : "Textures/Gameplay/Heroes/Rika/Rika.plist",
+            "JSON" : "Textures/Gameplay/Heroes/Rika/States.json"
         }
     ]
 }

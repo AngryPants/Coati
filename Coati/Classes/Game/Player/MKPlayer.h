@@ -131,9 +131,7 @@ public:
 
     // Animation State Names
     static const mkString RUN_ANIMATION_NAME;
-    static const mkString JUMP_START_ANIMATION_NAME;
-    static const mkString JUMP_LOOP_ANIMATION_NAME;
-    static const mkString JUMP_END_ANIMATION_NAME;
+    static const mkString JUMP_ANIMATION_NAME;
     static const mkString SLIDE_ANIMATION_NAME;
     static const mkString DIE_ANIMATION_NAME;
 

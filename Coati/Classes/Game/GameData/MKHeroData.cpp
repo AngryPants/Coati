@@ -4,7 +4,7 @@
 NS_MK_BEGIN
 
 // Name of default hero.
-const mkString MKHeroData::DEFAULT_HERO_NAME = "Default";
+const mkString MKHeroData::DEFAULT_HERO_NAME = "Larry";
 
 // JSON Data Name(s)
 const mkString MKHeroData::HERO_ARRAY_JSON_DATA_NAME = "Heroes";

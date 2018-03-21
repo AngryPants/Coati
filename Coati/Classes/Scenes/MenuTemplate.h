@@ -6,6 +6,7 @@
 #include "MK/UI/MKUIHelper.h"
 #include "Game/Background/MKBackground.h"
 #include "MK/Sprite/MKSprite.h"
+#include "MK/Audio/MKAudioManager.h"
 
 USING_NS_MK
 
@@ -14,6 +15,7 @@ class MenuTemplate : public MKScene
 	typedef MKScene Super;
 
 protected:
+    // Variable(s)
     MKBackground* m_Background = nullptr;
     MKSprite* m_Banner = nullptr;
     Label* m_Title = nullptr;

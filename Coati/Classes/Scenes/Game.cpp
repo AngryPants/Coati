@@ -74,6 +74,7 @@ void Game::onEnter()
     Super::onEnter();
 	InitialiseInput();
 	MKInputManager::GetInstance()->SetCurrentContext(MK_INPUT_CONTEXT_GAMEPLAY);
+    StartBGM();
 }
 
 void Game::onExit()
@@ -81,6 +82,7 @@ void Game::onExit()
     Super::onExit();
 	DeinitialiseInput();
 	MKInputManager::GetInstance()->SetCurrentContext(MK_INPUT_CONTEXT_DEFAULT);
+    StopBGM();
 }
 
 // Initialisation
@@ -265,7 +267,10 @@ void Game::CreatePauseUI()
             buttonSelectedTexture,
             buttonDisabledTexture,
             zoomScale,
-            [](Ref*) -> void { MKSceneManager::GetInstance()->PushScene("MainMenu"); }
+            [](Ref*) -> void
+            {
+                MKSceneManager::GetInstance()->ReplaceScene("MainMenu");
+            }
         );
 
         button->setPosition(Vec2(buttonPositionX, buttonPositionY));
@@ -345,9 +350,9 @@ void Game::CreateGameOverUI()
             buttonSelectedTexture,
             buttonDisabledTexture,
             zoomScale,
-            [=](Ref*) -> void
+            [](Ref*) -> void
             {
-                MKSceneManager::GetInstance()->PushScene("Game");
+                MKSceneManager::GetInstance()->ReplaceScene("Game");
             }
         );
 
@@ -378,7 +383,7 @@ void Game::CreateGameOverUI()
             zoomScale,
             [](Ref*) -> void
             {
-                MKSceneManager::GetInstance()->PushScene("MainMenu");
+                MKSceneManager::GetInstance()->ReplaceScene("MainMenu");
             }
         );
 
@@ -441,6 +446,8 @@ void Game::PauseGame()
 
     DeleteGameplayUI();
     CreatePauseUI();
+
+    PauseBGM();
 }
 
 void Game::ResumeGame()
@@ -454,6 +461,8 @@ void Game::ResumeGame()
 
     DeletePauseUI();
     CreateGameplayUI();
+
+    ResumeBGM();
 }
 
 // Input Callbacks
@@ -470,4 +479,37 @@ void Game::OnClick(EventCustom * _event)
 void Game::OnAxis(EventCustom * _event)
 {
     MKInputAxis* input = static_cast<MKInputAxis*>(_event->getUserData());
+}
+
+void Game::StartBGM()
+{
+    if (m_BGMSoundId == MKAudioManager::INVALID_SOUND_ID)
+    {
+        m_BGMSoundId = MKAudioManager::GetInstance()->PlaySound(m_BGMSoundName, MKSound::SoundType::BGM, 1.0f, true);
+    }
+}
+
+void Game::PauseBGM()
+{
+    if (m_BGMSoundId != MKAudioManager::INVALID_SOUND_ID)
+    {
+        MKAudioManager::GetInstance()->PauseSound(m_BGMSoundId);
+    }
+}
+
+void Game::ResumeBGM()
+{
+    if (m_BGMSoundId != MKAudioManager::INVALID_SOUND_ID)
+    {
+        MKAudioManager::GetInstance()->ResumeSound(m_BGMSoundId);
+    }
+}
+
+void Game::StopBGM()
+{
+    if (m_BGMSoundId != MKAudioManager::INVALID_SOUND_ID)
+    {
+        MKAudioManager::GetInstance()->StopSound(m_BGMSoundId);
+        m_BGMSoundId = MKAudioManager::INVALID_SOUND_ID;
+    }
 }

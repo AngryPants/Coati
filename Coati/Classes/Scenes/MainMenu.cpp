@@ -13,6 +13,7 @@ bool MainMenu::init()
 
     InitialiseBackground();
     InitialiseButtons();
+    StartBGM();
 
 	return true;
 }
@@ -43,7 +44,11 @@ void MainMenu::InitialiseButtons()
 			buttonSelectedTexture,
 			buttonDisabledTexture,
 			zoomScale,
-			[](Ref*) -> void { MKSceneManager::GetInstance()->ReplaceScene("Game"); }
+			[=](Ref*) -> void
+            {
+                StopBGM();
+                MKSceneManager::GetInstance()->ReplaceScene("Game");
+            }
 		);
 
 		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY - buttonHeight * (mkF32)buttonCount));
@@ -106,9 +111,10 @@ void MainMenu::InitialiseButtons()
 			buttonSelectedTexture,
 			buttonDisabledTexture,
 			zoomScale,
-			[](Ref*) -> void
+			[=](Ref*) -> void
 			{
-				// End the director.
+                StopBGM();
+                // End the director.
 				Director::getInstance()->end();
 				// Destroy the singletons.
 				MKInputManager::GetInstance()->Destroy();
@@ -124,4 +130,21 @@ void MainMenu::InitialiseButtons()
 		this->addChild(button);
 		++buttonCount;
 	}
+}
+
+void MainMenu::StartBGM()
+{
+    if (m_BGMSoundId == MKAudioManager::INVALID_SOUND_ID)
+    {
+        m_BGMSoundId = MKAudioManager::GetInstance()->PlaySound(m_BGMSoundName, MKSound::SoundType::BGM, 1.0f, true);
+    }
+}
+
+void MainMenu::StopBGM()
+{
+    if (m_BGMSoundId != MKAudioManager::INVALID_SOUND_ID)
+    {
+        MKAudioManager::GetInstance()->StopSound(m_BGMSoundId);
+        m_BGMSoundId = MKAudioManager::INVALID_SOUND_ID;
+    }
 }

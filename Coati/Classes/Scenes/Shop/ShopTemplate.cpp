@@ -216,7 +216,14 @@ void ShopTemplate::UpdateItemPrice(mkBool _ownsItem, mkU64 _price, mkBool _suffi
         return;
     }
 
-    m_ItemPriceValue->setString(StringUtils::toString(_price));
+    if (_price == 0)
+    {
+        m_ItemPriceValue->setString("FREE");
+    }
+    else
+    {
+        m_ItemPriceValue->setString(StringUtils::toString(_price));
+    }
     if (_sufficientCoins)
     {
         m_ItemPriceValue->setTextColor(m_SufficientCoinsColor);

@@ -1,0 +1,58 @@
+{
+  "States": [
+    {
+      "Name": "Run",
+      "Frames": [
+        "Rika_Run_0",
+        "Rika_Run_1",
+        "Rika_Run_2",
+        "Rika_Run_3",
+        "Rika_Run_4",
+        "Rika_Run_5",
+        "Rika_Run_6",
+        "Rika_Run_7",
+        "Rika_Run_8",
+        "Rika_Run_9"
+      ]
+    },
+    {
+      "Name": "Slide",
+      "Frames": [
+        "Rika_Slide_0",
+        "Rika_Slide_1",
+        "Rika_Slide_2",
+        "Rika_Slide_3",
+        "Rika_Slide_4",
+        "Rika_Slide_5"
+      ]
+    },
+    {
+      "Name": "Jump",
+      "Frames": [
+        "Rika_Jump_0",
+        "Rika_Jump_1",
+        "Rika_Jump_2",
+        "Rika_Jump_3",
+        "Rika_Jump_4",
+        "Rika_Jump_5"
+      ]
+    },
+    {
+      "Name": "Die",
+      "Frames": [
+        "Rika_Die_0",
+        "Rika_Die_1",
+        "Rika_Die_2",
+        "Rika_Die_3",
+        "Rika_Die_4",
+        "Rika_Die_5",
+        "Rika_Die_6",
+        "Rika_Die_7",
+        "Rika_Die_8",
+        "Rika_Die_9",
+        "Rika_Die_10",
+        "Rika_Die_11"
+      ]
+    }
+  ]
+}

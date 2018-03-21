@@ -7,7 +7,6 @@
 // Include MK
 #include "MenuTemplate.h"
 #include "MK/Sprite/MKSprite.h"
-#include "MK/Audio/MKAudioManager.h"
 
 USING_NS_CC;
 USING_NS_MK
@@ -18,13 +17,12 @@ class Settings : public MenuTemplate
 
 protected:
     // Sound Names(s)
-    const mkString m_BGMSoundName = "Settings_BGM";
-    const mkString m_SFXSoundName = "Settings_SFX";
+    // const mkString m_BGMSoundName = "Settings_BGM";
+    // const mkString m_SFXSoundName = "Settings_SFX";
 
     // Sound IDs
-    mkS32 m_BGMSoundId = MKAudioManager::INVALID_SOUND_ID;
-    mkS32 m_SFXSoundId = MKAudioManager::INVALID_SOUND_ID;
-    mkF32 timeTest = 0.0f;
+    // mkS32 m_BGMSoundId = MKAudioManager::INVALID_SOUND_ID;
+    // mkS32 m_SFXSoundId = MKAudioManager::INVALID_SOUND_ID;
 
     void InitialiseVolumeControls();
 

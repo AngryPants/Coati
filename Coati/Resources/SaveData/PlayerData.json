@@ -1,10 +1,10 @@
 {
     "Highscore" : 0,
-    "Coins" : 0,
+    "Coins" : 1000,
     
-    "Equipped_Background" : "Default",
-    "Owned_Backgrounds": ["Default"],
+    "Equipped_Background" : "Mountains",
+    "Owned_Backgrounds": ["Mountains"],
 
-    "Equipped_Hero" : "Default",
-    "Owned_Heroes" : ["Default"]
+    "Equipped_Hero" : "Larry",
+    "Owned_Heroes" : ["Larry"]
 }

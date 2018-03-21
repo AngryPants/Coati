@@ -1,23 +1,23 @@
 {
     "Backgrounds" : [
         {
-            "Name" : "Default",
-            "Price" : 0,
-            "Textures" : [
-                "Textures/Backgrounds/Farm/Layer_0.png",
-                "Textures/Backgrounds/Farm/Layer_1.png",
-                "Textures/Backgrounds/Farm/Layer_2.png",
-                "Textures/Backgrounds/Farm/Layer_3.png"
-            ]
-        },
-        {
             "Name" : "Mountains",
-            "Price" : 1000,
+            "Price" : 0,
             "Textures" : [
                 "Textures/Backgrounds/Mountains/Layer_0.png",
                 "Textures/Backgrounds/Mountains/Layer_1.png",
                 "Textures/Backgrounds/Mountains/Layer_2.png",
                 "Textures/Backgrounds/Mountains/Layer_3.png"
+            ]
+        },
+        {
+            "Name" : "Farm",
+            "Price" : 1000,
+            "Textures" : [
+                "Textures/Backgrounds/Farm/Layer_0.png",
+                "Textures/Backgrounds/Farm/Layer_1.png",
+                "Textures/Backgrounds/Farm/Layer_2.png",
+                "Textures/Backgrounds/Farm/Layer_3.png"
             ]
         },
         {

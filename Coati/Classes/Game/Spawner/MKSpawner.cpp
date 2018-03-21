@@ -101,7 +101,7 @@ void MKSpawner::SpawnWave()
     mkF32 obstaclePositionX = m_PlayerStartPositionX + m_PlayerDistanceToFirstObstacle;
     mkF32 obstacleInterval = GetObstacleInterval();
     m_WaveEndPositionX = m_PlayerStartPositionX + m_PlayerDistanceToFirstObstacle + (obstacleInterval * (mkF32)m_WaveObstacleCount) + m_PlayerDistanceFromLastObstacle;
-    for (mkU32 i = 0; i < m_WaveObstacleCount; ++i)
+    for (mkS32 i = 0; i < m_WaveObstacleCount; ++i)
     {
         ObstacleType obstacleType = (ObstacleType)MKMathsHelper::RandomInt(0, (mkS32)NUM_OBSTACLE_TYPE);
     
