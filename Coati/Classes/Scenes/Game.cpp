@@ -40,7 +40,7 @@ bool Game::initWithPhysics()
     playerData->LoadData(playerData->GetWritablePath());
 
     // Let's do some physics.
-    getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    // getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
 
     // Initialisation
     InitialisePlayer();
