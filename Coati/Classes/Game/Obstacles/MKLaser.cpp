@@ -50,7 +50,7 @@ mkBool MKLaser::init(mkF32 _startDelay)
     auto spawnGunsCallback = CallFunc::create(CC_CALLBACK_0(MKLaser::SpawnLaserGuns, this));
     auto spawnBeamCallback = CallFunc::create(CC_CALLBACK_0(MKLaser::SpawnLaserBeam, this));
 
-    mkF32 verticalMovementDistance = MKMathsHelper::RandomInt(static_cast<mkS32>(visibleSize.height * 0.6f), static_cast<mkS32>(visibleSize.height * 0.8f));
+    mkF32 verticalMovementDistance = (mkF32)MKMathsHelper::RandomInt(static_cast<mkS32>(visibleSize.height * 0.5f), static_cast<mkS32>(visibleSize.height * 0.9f));
     auto moveDownAction = MoveBy::create(LASER_MOVE_DOWN_DURATION, cocos2d::Vec2(0.0f, -verticalMovementDistance));
     auto moveUpAction = MoveBy::create(LASER_MOVE_UP_DURATION, cocos2d::Vec2(0.0f, verticalMovementDistance));
 
