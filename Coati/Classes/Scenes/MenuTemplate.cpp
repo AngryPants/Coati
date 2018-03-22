@@ -20,15 +20,18 @@ void MenuTemplate::InitialiseBackground()
     MK_ASSERT(equippedBackground != nullptr);
     MK_ASSERT(equippedBackground->GetTextureFilesCount() >= 4);
 
-    m_Background = MKBackground::create();
-
+    if (m_Background == nullptr)
+    {
+        m_Background = MKBackground::create();
+        m_Background->runAction(RepeatForever::create(MKFollowNodeAction::Create(1.0f, getDefaultCamera(), MinamiKotori::MKFollowNodeAction::ALL)));
+        addChild(m_Background);
+    }
+    
+    m_Background->removeAllLayers();
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(0), Vec2(0.0f, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(1), Vec2(0.0f, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(2), Vec2(0.0f, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(3), Vec2(0.0f, 0.0f)));
-
-    m_Background->runAction(RepeatForever::create(MKFollowNodeAction::Create(1.0f, getDefaultCamera(), MinamiKotori::MKFollowNodeAction::ALL)));
-    addChild(m_Background);
 }
 
 void MenuTemplate::InitialiseBanner()
@@ -90,4 +93,10 @@ void MenuTemplate::InitialiseTitle(const mkString& _titleName)
 void MenuTemplate::UpdateTitle(const mkString& _titleName)
 {
     m_Title->setString(_titleName);
+}
+
+void MenuTemplate::onEnter()
+{
+    Super::onEnter();
+    InitialiseBackground();
 }

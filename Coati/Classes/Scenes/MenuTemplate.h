@@ -31,6 +31,8 @@ public:
 	// Constructor(s) & Destructor
 	MenuTemplate() {}
 	virtual ~MenuTemplate() {}
+
+    virtual void onEnter() override;
 };
 
 #endif // TEMPLATE_MENU_SCENE_H
