@@ -55,11 +55,11 @@ void Settings::InitialiseVolumeControls()
     cocos2d::Vec2 labelPosition(visibleSize.width * 0.5f, visibleSize.height * 0.65f);
 
     // Slider
-    mkString barTexture = "Textures/UI/Slider/Menu/Slider_Bar_Normal.png";
-    mkString progressBarTexture = "Textures/UI/Slider/Menu/Slider_Bar_Progress.png";
-    mkString ballNormalTexture = "Textures/UI/Slider/Menu/Slider_Ball_Normal.png";
-    mkString ballSelectedTexture = "Textures/UI/Slider/Menu/Slider_Ball_Selected.png";
-    mkString ballDisabledTexture = "Textures/UI/Slider/Menu/Slider_Ball_Disabled.png";
+    mkString barTexture = "Textures/UI/Slider/Slider_Bar_Normal.png";
+    mkString progressBarTexture = "Textures/UI/Slider/Slider_Bar_Progress.png";
+    mkString ballNormalTexture = "Textures/UI/Slider/Slider_Ball_Normal.png";
+    mkString ballSelectedTexture = "Textures/UI/Slider/Slider_Ball_Selected.png";
+    mkString ballDisabledTexture = "Textures/UI/Slider/Slider_Ball_Disabled.png";
     mkF32 sliderHeight = visibleSize.height * 0.05f;
     mkF32 sliderWidth = sliderHeight * 10.0f;
     mkF32 zoomScale = 1.1f;
