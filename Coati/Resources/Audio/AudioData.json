@@ -10,12 +10,12 @@
 		},
 
 		{
-			"Name": "Slide",
-			"File_Location": "Audio/Player/Slide.mp3"
-		},
-		{
 			"Name": "Jump",
 			"File_Location": "Audio/Player/Jump.mp3"
+		},
+		{
+			"Name": "Slide",
+			"File_Location": "Audio/Player/Slide.mp3"
 		},
 
 		{

@@ -16,6 +16,8 @@ const mkString MKPlayer::SHIELD_SPRITE_FILE = "Textures/Gameplay/Powerups/Shield
 // Audio
 const mkString MKPlayer::SHIELD_ADD_SOUND_NAME = "Shield_Add";
 const mkString MKPlayer::SHIELD_REMOVE_SOUND_NAME = "Shield_Remove";
+const mkString MKPlayer::JUMP_SOUND_NAME = "Jump";
+const mkString MKPlayer::SLIDE_SOUND_NAME = "Slide";
 
 // Animation State Names
 const mkString MKPlayer::RUN_ANIMATION_NAME = "Run";
@@ -203,6 +205,9 @@ void MKPlayer::Jump()
 
     PlayJumpAnimation();
     SetJumpPhysicsShape();
+
+    // Play SFX
+    MKAudioManager::GetInstance()->PlaySound(JUMP_SOUND_NAME, MKSound::SoundType::SFX);
 }
 
 void MKPlayer::Slide()
@@ -235,6 +240,9 @@ void MKPlayer::Slide()
 
     PlaySlideAnimation();
     SetSlidePhysicsShape();
+
+    // Play SFX
+    MKAudioManager::GetInstance()->PlaySound(SLIDE_SOUND_NAME, MKSound::SoundType::SFX);
 }
 
 void MKPlayer::Die()

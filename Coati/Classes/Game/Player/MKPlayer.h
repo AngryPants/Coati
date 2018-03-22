@@ -128,6 +128,8 @@ public:
     // Audio
     static const mkString SHIELD_ADD_SOUND_NAME;
     static const mkString SHIELD_REMOVE_SOUND_NAME;
+    static const mkString JUMP_SOUND_NAME;
+    static const mkString SLIDE_SOUND_NAME;
 
     // Animation State Names
     static const mkString RUN_ANIMATION_NAME;
