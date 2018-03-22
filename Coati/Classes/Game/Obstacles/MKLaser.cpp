@@ -172,7 +172,7 @@ void MKLaser::SpawnParticles()
     m_LaserGunLeft->addChild(m_ParticlesLeft);
 
     // Create our particles for the right gun.
-    ParticleFire* m_ParticlesRight = ParticleFire::createWithTotalParticles(200);
+    m_ParticlesRight = ParticleFire::createWithTotalParticles(200);
     m_ParticlesRight->setEmissionRate(20.0f);
     m_ParticlesRight->setPositionType(cocos2d::ParticleSystem::PositionType::RELATIVE);
     m_ParticlesRight->setDuration(ParticleSystem::DURATION_INFINITY);
