@@ -112,6 +112,9 @@ protected:
     MK_DECL_INITIALISE_INPUT(MKPlayer);
     MK_DECL_DEINITIALISE_INPUT(MKPlayer);
 
+    // Pause
+    mkBool m_Paused = false;
+
     // Player Controls
     mkF32 m_SwipeDeadZone = 0.2f;
 
@@ -119,7 +122,6 @@ protected:
     MKCursorPosition m_ClickCurrentPosition;
     mkBool m_ClickReleased = true;
     void PlayerTouchInput(const MKInputClick* _input);
-
 
 public:
     // Sprite
@@ -149,6 +151,10 @@ public:
     MKScene* GetScene() { return m_Scene; }
     const MKScene* GetScene() const { return m_Scene; }
     mkU32 GetScore() const { return static_cast<mkU32>(m_Score); }
+
+    // Pause
+    void PausePlayer() { m_Paused = true; }
+    void ResumePlayer() { m_Paused = false; }
 
 CC_CONSTRUCTOR_ACCESS:
     // Constructor(s) & Destructor

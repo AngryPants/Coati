@@ -419,12 +419,9 @@ void MKPlayer::OnButton(EventCustom * _event)
 {
     MKInputButton* input = static_cast<MKInputButton*>(_event->getUserData());
 
+    if (input->m_ButtonState != MKInputButton::ButtonState::PRESS) { return; }
     if (!m_Alive) { return; }
-
-    if (input->m_ButtonState != MKInputButton::ButtonState::PRESS)
-    {
-        return;
-    }
+    if (m_Paused) { return; }
 
     switch (input->m_InputName)
     {
@@ -469,6 +466,9 @@ void MKPlayer::PlayerTouchInput(const MKInputClick*_input)
     default:
         break;
     }
+
+    // Ensure that the game is not paused.
+    if (m_Paused) { return; }
 
     // Ensure that the delta movement of the click is greater than the deadzone.
     mkF32 movementDelta = m_ClickCurrentPosition.GetY() - m_ClickStartPosition.GetY();

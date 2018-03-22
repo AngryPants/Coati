@@ -68,11 +68,11 @@
 
 		{
 			"Name": "Shield_Add",
-			"File_Location": "Audio/PowerUps/Shield/Shield_Add.mp3"
+			"File_Location": "Audio/Powerups/Shield/Shield_Add.mp3"
 		},
 		{
 			"Name": "Shield_Remove",
-			"File_Location": "Audio/PowerUps/Shield/Shield_Remove.mp3"
+			"File_Location": "Audio/Powerups/Shield/Shield_Remove.mp3"
 		}
 	]
 }

@@ -425,6 +425,8 @@ void Game::PauseGame()
 {
     pause();
 
+    m_Player->PausePlayer();
+
     for (Vector<Node*>::iterator iter = _children.begin(); iter != _children.end(); ++iter)
     {
         (*iter)->pause();
@@ -439,6 +441,8 @@ void Game::PauseGame()
 void Game::ResumeGame()
 {
     resume();
+
+    m_Player->ResumePlayer();
 
     for (Vector<Node*>::iterator iter = _children.begin(); iter != _children.end(); ++iter)
     {
