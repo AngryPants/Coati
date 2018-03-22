@@ -217,9 +217,9 @@ void Game::CreatePauseUI()
 
     // Resume Button
     {
-        mkF32 buttonPositionX = visibleSize.height * 0.6f;
+        mkF32 buttonPositionX = visibleSize.width * 0.5f - visibleSize.height * 0.3f;
         mkF32 buttonPositionY = visibleSize.height * 0.5f;
-        mkF32 buttonHeight = visibleSize.height * 0.5f;
+        mkF32 buttonHeight = visibleSize.height * 0.4f;
         mkString buttonNormalTexture = "Textures/UI/Buttons/Play/Button_Normal.png";
         mkString buttonSelectedTexture = "Textures/UI/Buttons/Play/Button_Selected.png";
         mkString buttonDisabledTexture = "Textures/UI/Buttons/Play/Button_Disabled.png";
@@ -243,9 +243,9 @@ void Game::CreatePauseUI()
 
     // Quit Button
     {
-        mkF32 buttonPositionX =  visibleSize.width - visibleSize.height * 0.6f;
+        mkF32 buttonPositionX = visibleSize.width * 0.5f + visibleSize.height * 0.3f;
         mkF32 buttonPositionY = visibleSize.height * 0.5f;
-        mkF32 buttonHeight = visibleSize.height * 0.5f;
+        mkF32 buttonHeight = visibleSize.height * 0.4f;
         mkString buttonNormalTexture = "Textures/UI/Buttons/Quit/Button_Normal.png";
         mkString buttonSelectedTexture = "Textures/UI/Buttons/Quit/Button_Selected.png";
         mkString buttonDisabledTexture = "Textures/UI/Buttons/Quit/Button_Disabled.png";
@@ -324,9 +324,9 @@ void Game::CreateGameOverUI()
 
     // Retry Button
     {
-        mkF32 buttonPositionX = visibleSize.height * 0.6f;
+        mkF32 buttonPositionX = visibleSize.width * 0.5f - visibleSize.height * 0.3f;
         mkF32 buttonPositionY = visibleSize.height * 0.5f;
-        mkF32 buttonHeight = visibleSize.height * 0.5f;
+        mkF32 buttonHeight = visibleSize.height * 0.4f;
         mkString buttonNormalTexture = "Textures/UI/Buttons/Retry/Button_Normal.png";
         mkString buttonSelectedTexture = "Textures/UI/Buttons/Retry/Button_Selected.png";
         mkString buttonDisabledTexture = "Textures/UI/Buttons/Retry/Button_Disabled.png";
@@ -353,9 +353,9 @@ void Game::CreateGameOverUI()
 
     // Quit Button
     {
-        mkF32 buttonPositionX = visibleSize.width - visibleSize.height * 0.6f;
+        mkF32 buttonPositionX = visibleSize.width * 0.5f + visibleSize.height * 0.3f;
         mkF32 buttonPositionY = visibleSize.height * 0.5f;
-        mkF32 buttonHeight = visibleSize.height * 0.5f;
+        mkF32 buttonHeight = visibleSize.height * 0.4f;
         mkString buttonNormalTexture = "Textures/UI/Buttons/Quit/Button_Normal.png";
         mkString buttonSelectedTexture = "Textures/UI/Buttons/Quit/Button_Selected.png";
         mkString buttonDisabledTexture = "Textures/UI/Buttons/Quit/Button_Disabled.png";
