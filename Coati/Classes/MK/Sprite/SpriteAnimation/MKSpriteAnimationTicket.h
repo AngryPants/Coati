@@ -35,7 +35,7 @@ public:
     {
         MK_ASSERT(_duration > 0.0f);
         MK_ASSERT((_loopCount >= 0) || (_loopCount == INFINITE_LOOPS));
-        MK_ASSERT(!((_loopCount == INFINITE_LOOPS) && _destroyOnFinish));
+        if ((_loopCount == INFINITE_LOOPS) && _destroyOnFinish) { MK_ASSERT(false); }
     }
     virtual ~MKSpriteAnimationTicket() {}
 

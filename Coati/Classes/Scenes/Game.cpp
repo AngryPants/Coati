@@ -49,9 +49,6 @@ bool Game::initWithPhysics()
     InitialiseSpawner();
 
     // UI
-    m_UINodeLayer = 1000;
-    m_UINode = cocos2d::Node::create();
-    addChild(m_UINode, m_UINodeLayer);
     CreateScoreUI();
     CreateGameplayUI();
 
@@ -63,9 +60,7 @@ bool Game::initWithPhysics()
 
 void Game::update(float _deltaTime)
 {
-    auto visibleSize = _director->getVisibleSize();
-    m_UINode->setPosition(getDefaultCamera()->getPosition() - Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.5f));
-    
+    UpdateUINode();
     UpdateScoreUI();
 }
 
@@ -120,6 +115,7 @@ void Game::InitialiseBackground()
     MK_ASSERT(equippedBackground->GetTextureFilesCount() >= 4);
 
     m_Background = MKBackground::create();
+    m_Background->setPosition(getDefaultCamera()->getPosition());
 
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(0), Vec2(m_Player->GetHorizontalVelocity() * 0.0f, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(1), Vec2(m_Player->GetHorizontalVelocity() * 0.1f, 0.0f)));

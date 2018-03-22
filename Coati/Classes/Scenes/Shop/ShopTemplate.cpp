@@ -53,7 +53,7 @@ void ShopTemplate::InitialiseWalletUI()
     mkF32 iconPositionY = m_Banner->getPositionY();
     m_WalletCoinIcon->setPosition(iconPositionX, iconPositionY);
     m_WalletCoinIcon->setScale(desiredWidth / m_WalletCoinIcon->getContentSize().width, desiredHeight / m_WalletCoinIcon->getContentSize().height);
-    addChild(m_WalletCoinIcon);
+    m_UINode->addChild(m_WalletCoinIcon);
 
     mkF32 iconValuePadding = m_WalletCoinIcon->getScaledContentSize().width * 0.5f; // The space between the number and the icon.
 
@@ -63,7 +63,7 @@ void ShopTemplate::InitialiseWalletUI()
     mkF32 valuePositionY = m_Banner->getPositionY();
     m_WalletValue->setPositionX(valuePositionX);
     m_WalletValue->setPositionY(valuePositionY);
-    addChild(m_WalletValue);
+    m_UINode->addChild(m_WalletValue);
 }
 
 void ShopTemplate::UpdateWalletUI()
@@ -109,13 +109,13 @@ void ShopTemplate::InitialiseBuyButton()
 
 void ShopTemplate::UpdateBuyButton(mkBool _ownsItem, mkBool _sufficientCoins)
 {
-    removeChild(m_BuyButton, false);
+    m_UINode->removeChild(m_BuyButton, false);
     if (_ownsItem)
     {
         return;
     }
 
-    addChild(m_BuyButton);
+    m_UINode->addChild(m_BuyButton);
     m_BuyButton->setEnabled(_sufficientCoins);
     m_BuyButton->setBright(_sufficientCoins);
     m_BuyButton->getTitleLabel()->setString("BUY");
@@ -153,13 +153,13 @@ void ShopTemplate::InitialiseEquipButton()
 
 void ShopTemplate::UpdateEquipButton(mkBool _ownsItem, mkBool _equippedItem)
 {
-    removeChild(m_EquipButton, false);
+    m_UINode->removeChild(m_EquipButton, false);
     if (!_ownsItem)
     {
         return;
     }
 
-    addChild(m_EquipButton);
+    m_UINode->addChild(m_EquipButton);
     if (_equippedItem)
     {
         m_EquipButton->setEnabled(false);
@@ -185,13 +185,13 @@ void ShopTemplate::InitialiseItemPrice()
     m_ItemPriceCoinIcon->setScale(desiredWidth / m_ItemPriceCoinIcon->getContentSize().width, desiredHeight / m_ItemPriceCoinIcon->getContentSize().height);
     m_ItemPriceCoinIcon->setPositionY(visibleSize.height * 0.7f);
     m_ItemPriceCoinIcon->retain();
-    addChild(m_ItemPriceCoinIcon);
+    m_UINode->addChild(m_ItemPriceCoinIcon);
 
     mkF32 fontSize = m_ItemPriceCoinIcon->getScaledContentSize().height;
     m_ItemPriceValue = MKUIHelper::CreateLabel("0", fontSize);
     m_ItemPriceValue->setPositionY(m_ItemPriceCoinIcon->getPositionY());
     m_ItemPriceValue->retain();
-    addChild(m_ItemPriceValue);
+    m_UINode->addChild(m_ItemPriceValue);
 
     m_InsufficientCoins = MKUIHelper::CreateLabel("[NOT ENOUGH COINS]", fontSize);
     m_InsufficientCoins->setPositionX(visibleSize.width * 0.5f);
@@ -204,9 +204,9 @@ void ShopTemplate::UpdateItemPrice(mkBool _ownsItem, mkU64 _price, mkBool _suffi
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
 
-    removeChild(m_ItemPriceCoinIcon, false);
-    removeChild(m_ItemPriceValue, false);
-    removeChild(m_InsufficientCoins, false);
+    m_UINode->removeChild(m_ItemPriceCoinIcon, false);
+    m_UINode->removeChild(m_ItemPriceValue, false);
+    m_UINode->removeChild(m_InsufficientCoins, false);
     if (_ownsItem)
     {
         return;
@@ -227,7 +227,7 @@ void ShopTemplate::UpdateItemPrice(mkBool _ownsItem, mkU64 _price, mkBool _suffi
     else
     {
         m_ItemPriceValue->setTextColor(m_InsufficientCoinsColor);
-        addChild(m_InsufficientCoins);
+        m_UINode->addChild(m_InsufficientCoins);
     }
     
     mkF32 iconValuePadding = m_ItemPriceCoinIcon->getScaledContentSize().width * 0.5f; // The space between the number and the icon.
@@ -236,8 +236,8 @@ void ShopTemplate::UpdateItemPrice(mkBool _ownsItem, mkU64 _price, mkBool _suffi
     m_ItemPriceCoinIcon->setPositionX((visibleSize.width * 0.5f) + (-totalWidth * 0.5f) + (m_ItemPriceCoinIcon->getScaledContentSize().width * 0.5f));
     m_ItemPriceValue->setPositionX((visibleSize.width * 0.5f) + (totalWidth * 0.5f) + (-m_ItemPriceValue->getScaledContentSize().width * 0.5f));
     
-    addChild(m_ItemPriceCoinIcon);
-    addChild(m_ItemPriceValue);
+    m_UINode->addChild(m_ItemPriceCoinIcon);
+    m_UINode->addChild(m_ItemPriceValue);
 }
 
 void ShopTemplate::InitialisePreviousItemButton()
@@ -265,7 +265,7 @@ void ShopTemplate::InitialisePreviousItemButton()
     button->setPosition(Vec2(buttonPositionX, buttonPositionY));
     button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
-    addChild(button);
+    m_UINode->addChild(button);
 }
 
 void ShopTemplate::InitialiseNextItemButton()
@@ -293,5 +293,5 @@ void ShopTemplate::InitialiseNextItemButton()
     button->setPosition(Vec2(buttonPositionX, buttonPositionY));
     button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
-    addChild(button);
+    m_UINode->addChild(button);
 }

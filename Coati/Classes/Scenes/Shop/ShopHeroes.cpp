@@ -42,7 +42,7 @@ mkBool ShopHeroes::init()
 void ShopHeroes::InitialiseHeroHook()
 {
     m_HeroHook = cocos2d::Node::create();
-    addChild(m_HeroHook);
+    m_UINode->addChild(m_HeroHook);
 }
 
 // Buy

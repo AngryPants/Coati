@@ -31,12 +31,46 @@ protected:
 	virtual void OnClick(EventCustom * _event) {}
 	virtual void OnAxis(EventCustom * _event) {}
 
+    // UI Node
+    cocos2d::Node* m_UINode = nullptr;
+    mkU32 m_UINodeLayer = 1000;
+
+    virtual void InitialiseUINode()
+    {
+        if (m_UINode == nullptr)
+        {
+            m_UINodeLayer = 1000;
+            m_UINode = cocos2d::Node::create();
+            addChild(m_UINode, m_UINodeLayer);
+        }
+    }
+    virtual void UpdateUINode()
+    {
+        if (m_UINode != nullptr)
+        {
+            auto visibleSize = _director->getVisibleSize();
+            m_UINode->setPosition(getDefaultCamera()->getPosition() - Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.5f));
+        }
+    }
+
 public:
 	MKScene() {}
 	virtual ~MKScene() {}
 
-	virtual bool init() { return Super::init(); }
-    virtual bool initWithPhysics() { return Super::initWithPhysics(); }
+	virtual bool init()
+    {
+        if (!Super::init()) { return false; }
+        InitialiseUINode();
+        UpdateUINode();
+        return true;
+    }
+    virtual bool initWithPhysics()
+    {
+        if (!Super::initWithPhysics()) { return false; }
+        InitialiseUINode();
+        UpdateUINode();
+        return true;
+    }
 
 	float GetAspectRatio() const
 	{

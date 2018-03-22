@@ -75,7 +75,7 @@ mkBool MKPlayer::OnContactBegin(cocos2d::PhysicsContact& _contact)
 void MKPlayer::PlayRunAnimation()
 {
     ClearAllTickets();
-    AddTicketToQueue(MKSpriteAnimationTicket::Create(RUN_ANIMATION_NAME, 0.5f, MKSpriteAnimationTicket::INFINITE_LOOPS, false));
+    AddTicketToQueue(MKSpriteAnimationTicket::Create(RUN_ANIMATION_NAME, 0.25f, MKSpriteAnimationTicket::INFINITE_LOOPS, false));
 }
 
 void MKPlayer::PlayJumpAnimation()

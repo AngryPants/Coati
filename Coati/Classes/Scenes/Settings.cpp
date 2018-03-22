@@ -75,7 +75,7 @@ void Settings::InitialiseVolumeControls()
         label->setPosition(labelPosition + positionOffset);
         label->setTextColor(fontColor);
 
-        this->addChild(label);
+        m_UINode->addChild(label);
 
         // Slider
         auto slider = MKUIHelper::CreateSlider(
@@ -102,7 +102,7 @@ void Settings::InitialiseVolumeControls()
         slider->setScaleX(sliderWidth / slider->getVirtualRendererSize().width);
         slider->setScaleY(sliderHeight / slider->getVirtualRendererSize().height);
 
-        this->addChild(slider);
+        m_UINode->addChild(slider);
     }
 
     // BGM Volume Control
@@ -115,7 +115,7 @@ void Settings::InitialiseVolumeControls()
         label->setPosition(labelPosition + positionOffset);
         label->setTextColor(fontColor);
 
-        this->addChild(label);
+        m_UINode->addChild(label);
 
         // Slider
         auto slider = MKUIHelper::CreateSlider(
@@ -142,7 +142,7 @@ void Settings::InitialiseVolumeControls()
         slider->setScaleX(sliderWidth / slider->getVirtualRendererSize().width);
         slider->setScaleY(sliderHeight / slider->getVirtualRendererSize().height);
 
-        this->addChild(slider);
+        m_UINode->addChild(slider);
     }
 
     /*
@@ -156,7 +156,7 @@ void Settings::InitialiseVolumeControls()
         label->setPosition(labelPosition + positionOffset);
         label->setTextColor(fontColor);
 
-        this->addChild(label);
+        m_UINode->addChild(label);
 
         // Slider
         auto slider = MKUIHelper::CreateSlider(
@@ -183,7 +183,7 @@ void Settings::InitialiseVolumeControls()
         slider->setScaleX(sliderWidth / slider->getVirtualRendererSize().width);
         slider->setScaleY(sliderHeight / slider->getVirtualRendererSize().height);
 
-        this->addChild(slider);
+        m_UINode->addChild(slider);
     }
     */
 
@@ -197,7 +197,7 @@ void Settings::InitialiseVolumeControls()
         label->setPosition(labelPosition + positionOffset);
         label->setTextColor(fontColor);
 
-        this->addChild(label);
+        m_UINode->addChild(label);
 
         // Slider
         auto slider = MKUIHelper::CreateSlider(
@@ -224,6 +224,6 @@ void Settings::InitialiseVolumeControls()
         slider->setScaleX(sliderWidth / slider->getVirtualRendererSize().width);
         slider->setScaleY(sliderHeight / slider->getVirtualRendererSize().height);
 
-        this->addChild(slider);
+        m_UINode->addChild(slider);
     }
 }

@@ -81,7 +81,7 @@ void StartScreen::InitialiseLogo()
     logo->setAnchorPoint(Vec2(0.5f, 1.0f));
     logo->setPosition(Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.8f));
 
-    this->addChild(logo);
+    m_UINode->addChild(logo);
 }
 
 void StartScreen::InitialiseStartLabel()
@@ -95,7 +95,7 @@ void StartScreen::InitialiseStartLabel()
     label->setPosition(cocos2d::Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.3f));
     label->setTextColor(fontColor);
 
-    this->addChild(label);
+    m_UINode->addChild(label);
 }
 
 void StartScreen::OnClick(EventCustom * _event)

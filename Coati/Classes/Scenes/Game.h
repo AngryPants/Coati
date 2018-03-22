@@ -33,8 +33,6 @@ private:
     MKSpawner* m_Spawner = nullptr;
 
     // UI
-    cocos2d::Node* m_UINode = nullptr;
-    mkU32 m_UINodeLayer = 0;
     cocos2d::Label* m_ScoreLabel = nullptr;
 
     cocos2d::Node* m_GameplayUINode = nullptr;

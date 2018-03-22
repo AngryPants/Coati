@@ -20,7 +20,7 @@ protected:
     MKSprite* m_Banner = nullptr;
     Label* m_Title = nullptr;
 
-	// UI
+    // UI
 	virtual void InitialiseBackground();
     virtual void InitialiseBanner();
 	virtual void InitialiseBackButton();

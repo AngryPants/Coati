@@ -12,7 +12,7 @@
 #define MK_USE_KEYBOARD true
 #define MK_USE_TOUCH true
 
-#define MK_DEBUG true
+#define MK_DEBUG COCOS2D_DEBUG
 
 typedef char mkS8;
 typedef short mkS16;

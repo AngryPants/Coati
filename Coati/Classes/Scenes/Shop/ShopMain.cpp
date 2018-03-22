@@ -41,7 +41,7 @@ void ShopMain::InitialiseButtons()
         button->setPosition(cocos2d::Vec2(visibleSize.width * 0.5f - visibleSize.height * 0.3f, visibleSize.height * 0.5f));
         button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
-        this->addChild(button);
+        m_UINode->addChild(button);
     }
 
 	// Buy Backgrounds
@@ -60,6 +60,6 @@ void ShopMain::InitialiseButtons()
         button->setPosition(cocos2d::Vec2(visibleSize.width * 0.5f + visibleSize.height * 0.3f, visibleSize.height * 0.5f));
 		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
-		this->addChild(button);
+        m_UINode->addChild(button);
 	}
 }

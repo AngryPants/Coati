@@ -50,7 +50,7 @@ void MainMenu::InitialiseButtons()
 		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
 		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
-		this->addChild(button);
+        m_UINode->addChild(button);
 	}
     
 	// Settings
@@ -77,7 +77,7 @@ void MainMenu::InitialiseButtons()
 		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
 		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
-		this->addChild(button);
+        m_UINode->addChild(button);
 	}
     
 	// Shop
@@ -104,7 +104,7 @@ void MainMenu::InitialiseButtons()
 		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
 		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
-		this->addChild(button);
+        m_UINode->addChild(button);
 	}
 
     // Quit
@@ -140,7 +140,7 @@ void MainMenu::InitialiseButtons()
 		button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
 		button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
-		this->addChild(button);
+        m_UINode->addChild(button);
 	}
 }
 

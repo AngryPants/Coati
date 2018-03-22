@@ -23,6 +23,7 @@ void MenuTemplate::InitialiseBackground()
     if (m_Background == nullptr)
     {
         m_Background = MKBackground::create();
+        m_Background->setPosition(getDefaultCamera()->getPosition());
         m_Background->runAction(RepeatForever::create(MKFollowNodeAction::Create(1.0f, getDefaultCamera(), MinamiKotori::MKFollowNodeAction::ALL)));
         addChild(m_Background);
     }
@@ -44,7 +45,7 @@ void MenuTemplate::InitialiseBanner()
     m_Banner->setScale(desiredWidth / m_Banner->getContentSize().width, desiredHeight / m_Banner->getContentSize().height);
     m_Banner->setPosition(visibleSize.width * 0.5f, visibleSize.height - desiredHeight * 0.5f);
     m_Banner->SetTextureScale(desiredWidth / m_Banner->getContentSize().width, 1.0f);
-    addChild(m_Banner);
+    m_UINode->addChild(m_Banner);
 }
 
 void MenuTemplate::InitialiseBackButton()
@@ -73,7 +74,7 @@ void MenuTemplate::InitialiseBackButton()
 	button->setPosition(cocos2d::Vec2(buttonPositionX, buttonPositionY));
 	button->setScale(buttonHeight / button->getNormalTextureSize().height);
 
-	this->addChild(button);
+    m_UINode->addChild(button);
 }
 
 void MenuTemplate::InitialiseTitle(const mkString& _titleName)
@@ -87,7 +88,7 @@ void MenuTemplate::InitialiseTitle(const mkString& _titleName)
     m_Title->setPosition(cocos2d::Vec2(visibleSize.width * 0.5f, m_Banner->getPositionY()));
     m_Title->setTextColor(fontColor);
 
-    this->addChild(m_Title);
+    m_UINode->addChild(m_Title);
 }
 
 void MenuTemplate::UpdateTitle(const mkString& _titleName)
