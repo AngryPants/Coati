@@ -36,21 +36,17 @@ public:
 		mkF32 _fontSize,
 		const mkString& _fontName = DEFAULT_FONT)
 	{
-		// Find out the font type.
-		MK_ASSERT((_fontName.length() > 4));
-		mkString fileExtension;
-		for (mkU32 i = _fontName.length() - 4; i < _fontName.length(); ++i)
-		{
-			fileExtension.push_back(_fontName[i]);
-		}
-
 		// Create Label
 		Label* label = nullptr;
-		if (fileExtension == ".ttf")
+        if (_fontName.find(".ttf") != std::string::npos)
 		{
 			label = Label::createWithTTF(_labelText, _fontName, _fontSize);
 		}
-		else if (fileExtension == ".fon")
+        else if (_fontName.find(".fnt") != std::string::npos)
+        {
+            label = Label::createWithBMFont(_fontName, _labelText);
+        }
+		else
 		{
 			label = Label::createWithSystemFont(_labelText, _fontName, _fontSize);
 		}
@@ -70,12 +66,11 @@ public:
 		mkF32 _zoomScale = DEFAULT_ZOOM_SCALE,
 		const std::function<void(Ref*)>& _callback = nullptr)
 	{
-		// Create Label
-		auto label = CreateLabel(_labelText, _fontSize, _fontName);
-		
 		// Create Button
 		auto button = ui::Button::create(_normalTexture, _selectedTexture, _disabledTexture);
-		button->setTitleLabel(label);
+        button->setTitleFontName(_fontName);
+        button->setTitleFontSize(_fontSize);
+        button->setTitleText(_labelText);
 		button->setZoomScale(_zoomScale);
         // button->setPressedActionEnabled(true);
 
@@ -84,6 +79,8 @@ public:
         {
             button->addClickEventListener(_callback);
         }
+
+        auto label = button->getTitleLabel();
 
 		return button;
 	}

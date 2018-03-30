@@ -26,13 +26,12 @@ void MenuTemplate::InitialiseBackground()
         m_Background->setPosition(getDefaultCamera()->getPosition());
         m_Background->runAction(RepeatForever::create(MKFollowNodeAction::Create(1.0f, getDefaultCamera(), MinamiKotori::MKFollowNodeAction::ALL)));
         addChild(m_Background);
+
+        m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(0), Vec2(0.0f, 0.0f)));
+        m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(1), Vec2(0.0f, 0.0f)));
+        m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(2), Vec2(0.0f, 0.0f)));
+        m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(3), Vec2(0.0f, 0.0f)));
     }
-    
-    m_Background->removeAllLayers();
-    m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(0), Vec2(0.0f, 0.0f)));
-    m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(1), Vec2(0.0f, 0.0f)));
-    m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(2), Vec2(0.0f, 0.0f)));
-    m_Background->addLayer(MKBackgroundLayer::create(equippedBackground->GetTextureFile(3), Vec2(0.0f, 0.0f)));
 }
 
 void MenuTemplate::InitialiseBanner()

@@ -85,7 +85,7 @@ void ShopTemplate::InitialiseBuyButton()
     mkF32 buttonHeight = visibleSize.height * 0.1f;
     mkF32 buttonPositionX = visibleSize.width * 0.5f;
     mkF32 buttonPositionY = visibleSize.height * 0.2f;
-    mkF32 fontSize = buttonHeight;
+    mkF32 fontSize = 50.0f;
     mkString buttonNormalTexture = "Textures/UI/Buttons/Menu/Button_Normal.png";
     mkString buttonSelectedTexture = "Textures/UI/Buttons/Menu/Button_Selected.png";
     mkString buttonDisabledTexture = "Textures/UI/Buttons/Menu/Button_Disabled.png";
@@ -129,7 +129,7 @@ void ShopTemplate::InitialiseEquipButton()
     mkF32 buttonHeight = visibleSize.height * 0.1f;
     mkF32 buttonPositionX = visibleSize.width * 0.5f;
     mkF32 buttonPositionY = visibleSize.height * 0.2f;
-    mkF32 fontSize = buttonHeight;
+    mkF32 fontSize = 50.0f;
     mkString buttonNormalTexture = "Textures/UI/Buttons/Menu/Button_Normal.png";
     mkString buttonSelectedTexture = "Textures/UI/Buttons/Menu/Button_Selected.png";
     mkString buttonDisabledTexture = "Textures/UI/Buttons/Menu/Button_Disabled.png";
