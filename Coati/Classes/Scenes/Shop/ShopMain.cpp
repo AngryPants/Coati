@@ -63,3 +63,9 @@ void ShopMain::InitialiseButtons()
         m_UINode->addChild(button);
 	}
 }
+
+void ShopMain::onEnter()
+{
+    Super::onEnter();
+    UpdateWalletUI();
+}

@@ -24,6 +24,7 @@ public:
     CREATE_FUNC(ShopMain);
 
 	virtual mkBool init();
+    virtual void onEnter() override;
 };
 
 #endif // SCENE_SHOP_H

@@ -56,6 +56,8 @@ public:
 	}
 
 	// Create Button (Apparently the font size does not scale according to the button. So decide beforehand what you want the font size to be.)
+    // EDIT: Apparently the font size is completely fucked on mobile or whatever. Don't even bother using. Seriously. Fuck this stupid fucking shit.
+    // Waste my time nia.
 	static ui::Button* CreateButton(
 		const mkString& _labelText,
 		mkF32 _fontSize,

@@ -64,6 +64,7 @@ void ShopHeroes::BuyCurrentItem()
     m_PlayerData->AddOwnedHero(hero->GetName());
     m_PlayerData->SaveData(m_PlayerData->GetWritablePath());
     SetHero(hero);
+    UpdateWalletUI();
 }
 
 // Equip

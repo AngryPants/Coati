@@ -85,14 +85,13 @@ void ShopTemplate::InitialiseBuyButton()
     mkF32 buttonHeight = visibleSize.height * 0.1f;
     mkF32 buttonPositionX = visibleSize.width * 0.5f;
     mkF32 buttonPositionY = visibleSize.height * 0.2f;
-    mkF32 fontSize = 50.0f;
-    mkString buttonNormalTexture = "Textures/UI/Buttons/Menu/Button_Normal.png";
-    mkString buttonSelectedTexture = "Textures/UI/Buttons/Menu/Button_Selected.png";
-    mkString buttonDisabledTexture = "Textures/UI/Buttons/Menu/Button_Disabled.png";
+    mkString buttonNormalTexture = "Textures/UI/Buttons/Shop/Buy/Button_Normal.png";
+    mkString buttonSelectedTexture = "Textures/UI/Buttons/Shop/Buy/Button_Selected.png";
+    mkString buttonDisabledTexture = "Textures/UI/Buttons/Shop/Buy/Button_Disabled.png";
     
     m_BuyButton = MKUIHelper::CreateButton(
-        "BUY",
-        fontSize,
+        "",
+        0.0f,
         MKUIHelper::DEFAULT_FONT,
         buttonNormalTexture,
         buttonSelectedTexture,
@@ -118,7 +117,6 @@ void ShopTemplate::UpdateBuyButton(mkBool _ownsItem, mkBool _sufficientCoins)
     m_UINode->addChild(m_BuyButton);
     m_BuyButton->setEnabled(_sufficientCoins);
     m_BuyButton->setBright(_sufficientCoins);
-    m_BuyButton->getTitleLabel()->setString("BUY");
 }
 
 // Equip Button
@@ -129,14 +127,13 @@ void ShopTemplate::InitialiseEquipButton()
     mkF32 buttonHeight = visibleSize.height * 0.1f;
     mkF32 buttonPositionX = visibleSize.width * 0.5f;
     mkF32 buttonPositionY = visibleSize.height * 0.2f;
-    mkF32 fontSize = 50.0f;
-    mkString buttonNormalTexture = "Textures/UI/Buttons/Menu/Button_Normal.png";
-    mkString buttonSelectedTexture = "Textures/UI/Buttons/Menu/Button_Selected.png";
-    mkString buttonDisabledTexture = "Textures/UI/Buttons/Menu/Button_Disabled.png";
+    mkString buttonNormalTexture = "Textures/UI/Buttons/Shop/Equip/Button_Normal.png";
+    mkString buttonSelectedTexture = "Textures/UI/Buttons/Shop/Equip/Button_Selected.png";
+    mkString buttonDisabledTexture = "Textures/UI/Buttons/Shop/Equip/Button_Disabled.png";
 
     m_EquipButton = MKUIHelper::CreateButton(
-        "EQUIP",
-        fontSize,
+        "",
+        0.0f,
         MKUIHelper::DEFAULT_FONT,
         buttonNormalTexture,
         buttonSelectedTexture,
@@ -164,13 +161,11 @@ void ShopTemplate::UpdateEquipButton(mkBool _ownsItem, mkBool _equippedItem)
     {
         m_EquipButton->setEnabled(false);
         m_EquipButton->setBright(false);
-        m_EquipButton->getTitleLabel()->setString("EQUIPPED");
     }
     else
     {
         m_EquipButton->setEnabled(true);
         m_EquipButton->setBright(true);
-        m_EquipButton->getTitleLabel()->setString("EQUIP");
     }
 }
 

@@ -56,6 +56,7 @@ void ShopBackgrounds::BuyCurrentItem()
     m_PlayerData->AddOwnedBackground(background->GetName());
     m_PlayerData->SaveData(m_PlayerData->GetWritablePath());
     SetBackground(background);
+    UpdateWalletUI();
 }
 
 // Equip
