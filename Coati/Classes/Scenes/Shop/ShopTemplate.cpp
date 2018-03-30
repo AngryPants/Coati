@@ -46,6 +46,7 @@ void ShopTemplate::InitialiseWalletUI()
 
     MKPlayerData* playerData = MKGameDataLoader::GetInstance()->GetGameData<MKPlayerData>();
 
+    // Create the coin icon.
     m_WalletCoinIcon = MKSprite::CreateWithFile("Textures/UI/Coin.png");
     mkF32 desiredHeight = visibleSize.height * 0.1f;
     mkF32 desiredWidth = desiredHeight;
@@ -55,23 +56,22 @@ void ShopTemplate::InitialiseWalletUI()
     m_WalletCoinIcon->setScale(desiredWidth / m_WalletCoinIcon->getContentSize().width, desiredHeight / m_WalletCoinIcon->getContentSize().height);
     m_UINode->addChild(m_WalletCoinIcon);
 
-    mkF32 iconValuePadding = m_WalletCoinIcon->getScaledContentSize().width * 0.5f; // The space between the number and the icon.
-
+    // Create the number of coins label.
     m_WalletValue = MKUIHelper::CreateLabel(StringUtils::toString(playerData->GetCoins()), m_WalletCoinIcon->getScaledContentSize().height);
-    mkF32 fontSize = m_WalletCoinIcon->getScaledContentSize().height;
-    mkF32 valuePositionX = m_WalletCoinIcon->getPositionX() - (m_WalletCoinIcon->getScaledContentSize().width + m_WalletValue->getScaledContentSize().width) * 0.5f - iconValuePadding;
-    mkF32 valuePositionY = m_Banner->getPositionY();
-    m_WalletValue->setPositionX(valuePositionX);
-    m_WalletValue->setPositionY(valuePositionY);
+    m_WalletValue->setPositionY(m_WalletCoinIcon->getPositionY());
     m_UINode->addChild(m_WalletValue);
+
+    UpdateWalletUI();
 }
 
 void ShopTemplate::UpdateWalletUI()
 {
     MKPlayerData* playerData = MKGameDataLoader::GetInstance()->GetGameData<MKPlayerData>();
 
+    mkF32 iconValuePadding = m_WalletCoinIcon->getScaledContentSize().width * 0.25f; // The space between the number and the icon.
+
     m_WalletValue->setString(StringUtils::toString(playerData->GetCoins()));
-    mkF32 valuePositionX = m_WalletCoinIcon->getPositionX() - m_WalletCoinIcon->getScaledContentSize().width - (m_WalletValue->getScaledContentSize().width * 0.5f);
+    mkF32 valuePositionX = m_WalletCoinIcon->getPositionX() - (m_WalletCoinIcon->getScaledContentSize().width + m_WalletValue->getScaledContentSize().width) * 0.5f - iconValuePadding;
     mkF32 valuePositionY = m_Banner->getPositionY();
     m_WalletValue->setPositionX(valuePositionX);
     m_WalletValue->setPositionY(valuePositionY);
@@ -85,7 +85,7 @@ void ShopTemplate::InitialiseBuyButton()
     mkF32 buttonHeight = visibleSize.height * 0.1f;
     mkF32 buttonPositionX = visibleSize.width * 0.5f;
     mkF32 buttonPositionY = visibleSize.height * 0.2f;
-    mkF32 fontSize = 50.0f;
+    mkF32 fontSize = buttonHeight * 0.8f;
     mkString buttonNormalTexture = "Textures/UI/Buttons/Menu/Button_Normal.png";
     mkString buttonSelectedTexture = "Textures/UI/Buttons/Menu/Button_Selected.png";
     mkString buttonDisabledTexture = "Textures/UI/Buttons/Menu/Button_Disabled.png";
@@ -129,7 +129,7 @@ void ShopTemplate::InitialiseEquipButton()
     mkF32 buttonHeight = visibleSize.height * 0.1f;
     mkF32 buttonPositionX = visibleSize.width * 0.5f;
     mkF32 buttonPositionY = visibleSize.height * 0.2f;
-    mkF32 fontSize = 50.0f;
+    mkF32 fontSize = buttonHeight * 0.8f;
     mkString buttonNormalTexture = "Textures/UI/Buttons/Menu/Button_Normal.png";
     mkString buttonSelectedTexture = "Textures/UI/Buttons/Menu/Button_Selected.png";
     mkString buttonDisabledTexture = "Textures/UI/Buttons/Menu/Button_Disabled.png";

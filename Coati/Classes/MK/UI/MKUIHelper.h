@@ -55,7 +55,7 @@ public:
 		return label;
 	}
 
-	// Create Button
+	// Create Button (Apparently the font size does not scale according to the button. So decide beforehand what you want the font size to be.)
 	static ui::Button* CreateButton(
 		const mkString& _labelText,
 		mkF32 _fontSize,
