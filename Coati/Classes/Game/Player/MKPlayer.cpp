@@ -103,7 +103,7 @@ void MKPlayer::SetRunPhysicsShape()
 {
     if (m_RunPhysicsShape == nullptr)
     {
-        m_RunPhysicsShape = PhysicsShapeBox::create(Size(getContentSize().width * 0.5f, getContentSize().height * 0.8f), PHYSICSBODY_MATERIAL_DEFAULT, Vec2::ZERO);
+        m_RunPhysicsShape = PhysicsShapeBox::create(Size(getContentSize().width * 0.25f, getContentSize().height * 0.6f), PHYSICSBODY_MATERIAL_DEFAULT, Vec2::ZERO);
         m_RunPhysicsShape->setCategoryBitmask(MK_COLLISION_CATEGORY_PLAYER);
         m_RunPhysicsShape->setCollisionBitmask(MK_COLLISION_CATEGORY_NONE);
         m_RunPhysicsShape->setContactTestBitmask(MK_COLLISION_CATEGORY_OBSTACLE | MK_COLLISION_CATEGORY_SHIELD);
@@ -117,7 +117,7 @@ void MKPlayer::SetJumpPhysicsShape()
 {
     if (m_JumpPhysicsShape == nullptr)
     {
-        m_JumpPhysicsShape = PhysicsShapeBox::create(Size(getContentSize().width * 0.5f, getContentSize().height * 0.8f), PHYSICSBODY_MATERIAL_DEFAULT, Vec2::ZERO);
+        m_JumpPhysicsShape = PhysicsShapeBox::create(Size(getContentSize().width * 0.25f, getContentSize().height * 0.6f), PHYSICSBODY_MATERIAL_DEFAULT, Vec2::ZERO);
         m_JumpPhysicsShape->setCategoryBitmask(MK_COLLISION_CATEGORY_PLAYER);
         m_JumpPhysicsShape->setCollisionBitmask(MK_COLLISION_CATEGORY_NONE);
         m_JumpPhysicsShape->setContactTestBitmask(MK_COLLISION_CATEGORY_OBSTACLE | MK_COLLISION_CATEGORY_SHIELD);

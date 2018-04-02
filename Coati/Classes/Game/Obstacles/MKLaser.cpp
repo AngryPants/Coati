@@ -13,6 +13,10 @@ const mkF32 MKLaser::LASER_BEAM_SHOOT_DURATION = 0.2f;
 
 // Sprite
 const mkString MKLaser::LASER_GUN_SPRITE_FILE = "Textures/Gameplay/Obstacles/Laser/Laser_Gun.png";
+const mkString MKLaser::LASER_WARNING_LINE_SPRITE_FILE = "Textures/Gameplay/Obstacles/Laser/Laser_Warning_Line.png";
+const mkString MKLaser::LASER_WARNING_SPARK_SPRITE_FILE = "Textures/Gameplay/Obstacles/Laser/Laser_Warning_Spark.png";
+
+// Sprite Animation
 const mkString MKLaser::LASER_BEAM_PLIST_FILE = "Textures/Gameplay/Obstacles/Laser/Beam/Beam.plist";
 const mkString MKLaser::LASER_BEAM_JSON_FILE = "Textures/Gameplay/Obstacles/Laser/Beam/Beam.json";
 
@@ -57,6 +61,9 @@ mkBool MKLaser::init(mkF32 _startDelay)
     auto spawnParticlesCallback = CallFunc::create(CC_CALLBACK_0(MKLaser::SpawnParticles, this));
     auto despawnParticlesCallback = CallFunc::create(CC_CALLBACK_0(MKLaser::DespawnParticles, this));
 
+    auto spawnLaserWarningCallback = CallFunc::create(CC_CALLBACK_0(MKLaser::SpawnLaserWarning, this));
+    auto despawnLaserWarningCallback = CallFunc::create(CC_CALLBACK_0(MKLaser::DespawnLaserWarning, this));
+
     auto spawnPhysicsBodyCallback = CallFunc::create(CC_CALLBACK_0(MKLaser::SpawnPhysicsBody, this));
     auto despawnPhysicsBodyCallback = CallFunc::create(CC_CALLBACK_0(MKLaser::DespawnPhysicsBody, this));
 
@@ -71,7 +78,9 @@ mkBool MKLaser::init(mkF32 _startDelay)
                     moveDownAction,
                     // Charge up the beam.
                     spawnParticlesCallback,
+                    spawnLaserWarningCallback,
                     DelayTime::create(LASER_BEAM_CHARGE_DURATION),
+                    despawnLaserWarningCallback,
                     // Shoot the beam.
                     spawnBeamCallback,
                     spawnPhysicsBodyCallback,
@@ -128,6 +137,7 @@ mkBool MKLaser::OnContactBegin(cocos2d::PhysicsContact& _contact)
 
     return true;
 }
+
 void MKLaser::SpawnLaserGuns()
 {
     Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -206,6 +216,67 @@ void MKLaser::DespawnParticles()
         m_LaserGunRight->removeChild(m_ParticlesRight, true);
         m_ParticlesRight = nullptr;
     }
+}
+
+void MKLaser::SpawnLaserWarning()
+{
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+
+    // Create Line
+    {
+        mkF32 desiredHeight = m_LaserGunLeft->getScaledContentSize().height;
+        mkF32 desiredWidth = visibleSize.width;
+        m_LaserWarningLine = MKSprite::CreateWithFile(LASER_WARNING_LINE_SPRITE_FILE, MKSprite::REPEAT);
+        m_LaserWarningLine->setScaleX(desiredWidth / m_LaserWarningLine->getContentSize().width);
+        m_LaserWarningLine->setScaleY(desiredHeight / m_LaserWarningLine->getContentSize().height);
+        m_LaserWarningLine->setPositionY(m_LaserGunLeft->getPositionY());
+        addChild(m_LaserWarningLine, m_LaserBeamZPriority);
+    }
+
+    // Create Left Spark
+    {
+        mkF32 desiredHeight = m_LaserGunLeft->getScaledContentSize().height;
+        mkF32 desiredWidth = desiredHeight;
+        m_LaserWarningSparkLeft = MKSprite::CreateWithFile(LASER_WARNING_SPARK_SPRITE_FILE);
+        m_LaserWarningSparkLeft->setPositionX(-visibleSize.width * 0.5f);
+        m_LaserWarningSparkLeft->setScaleX(desiredWidth / m_LaserWarningSparkLeft->getContentSize().width);
+        m_LaserWarningSparkLeft->setScaleY(desiredHeight / m_LaserWarningSparkLeft->getContentSize().height);
+
+        // Create Move Action
+        auto moveAction = cocos2d::MoveBy::create(LASER_BEAM_CHARGE_DURATION, Vec2(visibleSize.width * 0.5f, 0.0f));
+        m_LaserWarningSparkLeft->runAction(moveAction);
+        addChild(m_LaserWarningSparkLeft, m_LaserBeamZPriority);
+    }
+
+    // Create Right Spark
+    {
+        mkF32 desiredHeight = m_LaserGunRight->getScaledContentSize().height;
+        mkF32 desiredWidth = desiredHeight;
+        m_LaserWarningSparkRight = MKSprite::CreateWithFile(LASER_WARNING_SPARK_SPRITE_FILE);
+        m_LaserWarningSparkRight->setPositionX(visibleSize.width * 0.5f);
+        m_LaserWarningSparkRight->setScaleX(desiredWidth / m_LaserWarningSparkRight->getContentSize().width);
+        m_LaserWarningSparkRight->setScaleY(desiredHeight / m_LaserWarningSparkRight->getContentSize().height);
+
+        // Create Move Action
+        auto moveAction = cocos2d::MoveBy::create(LASER_BEAM_CHARGE_DURATION, Vec2(-visibleSize.width * 0.5f, 0.0f));
+        m_LaserWarningSparkRight->runAction(moveAction);
+        addChild(m_LaserWarningSparkRight, m_LaserBeamZPriority);
+    }
+}
+
+void MKLaser::DespawnLaserWarning()
+{
+    // Delete Line
+    removeChild(m_LaserWarningLine);
+    m_LaserWarningLine = nullptr;
+
+    // Remove Left Spark
+    removeChild(m_LaserWarningSparkLeft);
+    m_LaserWarningSparkLeft = nullptr;
+
+    // Remove Right Spark
+    removeChild(m_LaserWarningSparkRight);
+    m_LaserWarningSparkRight = nullptr;
 }
 
 void MKLaser::SpawnLaserBeam()

@@ -52,8 +52,8 @@ mkBool MKMissileWarning::init(mkF32 _warningDuration, cocos2d::Node* _followNode
     // Run Action(s)
     // Scale
     auto visibleSize = Director::getInstance()->getVisibleSize();
-    mkF32 maxSize = visibleSize.height * 0.06f;
-    mkF32 minSize = visibleSize.height * 0.04f;
+    mkF32 maxSize = visibleSize.height * 0.1f;
+    mkF32 minSize = visibleSize.height * 0.06f;
     MKScaleUpAndDownAction* scaleAction = MKScaleUpAndDownAction::Create(m_WarningDuration, minSize / getContentSize().height, maxSize / getContentSize().height, 0.0f, 10.0f);
     
     // Play Sound

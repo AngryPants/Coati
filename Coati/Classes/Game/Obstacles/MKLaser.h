@@ -18,7 +18,10 @@ protected:
     MKSprite* m_LaserGunRight = nullptr;
     cocos2d::ParticleSystem* m_ParticlesLeft = nullptr;
     cocos2d::ParticleSystem* m_ParticlesRight = nullptr;
-    
+    MKSprite* m_LaserWarningLine = nullptr;
+    MKSprite* m_LaserWarningSparkLeft = nullptr;
+    MKSprite* m_LaserWarningSparkRight = nullptr;
+
     mkS32 m_LaserGunZPriority = 1;
     mkS32 m_LaserBeamZPriority = 0;
 
@@ -28,6 +31,8 @@ protected:
     virtual void SpawnLaserGuns();
     virtual void SpawnParticles();
     virtual void DespawnParticles();
+    virtual void SpawnLaserWarning();
+    virtual void DespawnLaserWarning();
     virtual void SpawnLaserBeam();
     virtual void SpawnPhysicsBody();
     virtual void DespawnPhysicsBody();
@@ -45,6 +50,8 @@ public:
 
     // Sprite
     static const mkString LASER_GUN_SPRITE_FILE;
+    static const mkString LASER_WARNING_LINE_SPRITE_FILE;
+    static const mkString LASER_WARNING_SPARK_SPRITE_FILE;
 
     // Sprite Animation
     static const mkString LASER_BEAM_PLIST_FILE;

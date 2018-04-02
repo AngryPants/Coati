@@ -87,7 +87,7 @@ mkBool MKSpike::init(mkU32 _spikeCount)
 
     // Create the PhysicsBody.
     mkF32 physicsBodyWidth = getContentSize().width * static_cast<mkF32>(m_SpikeCount - 1) / static_cast<mkF32>(m_SpikeCount);
-    mkF32 physicsBodyHeight = getContentSize().height;
+    mkF32 physicsBodyHeight = getContentSize().height * 0.8f;
     cocos2d::PhysicsBody* physicsBody = PhysicsBody::createBox(Size(physicsBodyWidth, physicsBodyHeight));
     physicsBody->setDynamic(false);
     physicsBody->setCategoryBitmask(MK_COLLISION_CATEGORY_OBSTACLE);

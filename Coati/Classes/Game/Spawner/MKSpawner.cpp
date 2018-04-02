@@ -28,7 +28,7 @@ MKSpawner::~MKSpawner()
 // Internal Function(s)
 mkF32 MKSpawner::GetObstacleInterval() const
 {
-    return Director::getInstance()->getVisibleSize().height;
+    return Director::getInstance()->getVisibleSize().height * 1.5f;
 }
 
 mkF32 MKSpawner::GetScreenTop() const
