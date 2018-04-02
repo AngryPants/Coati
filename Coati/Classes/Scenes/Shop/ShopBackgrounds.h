@@ -34,6 +34,7 @@ public:
 	CREATE_FUNC(ShopBackgrounds);
 
 	virtual mkBool init();
+    virtual void onEnter() override;
 };
 
 #endif // SCENE_SHOP_BACKGROUND

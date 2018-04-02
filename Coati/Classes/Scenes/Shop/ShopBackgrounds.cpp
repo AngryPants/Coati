@@ -136,3 +136,8 @@ void ShopBackgrounds::SetBackground(MKBackgroundShopItem* _background)
     m_Background->addLayer(MKBackgroundLayer::create(_background->GetTextureFile(2), Vec2(0.2f * visibleSize.width, 0.0f)));
     m_Background->addLayer(MKBackgroundLayer::create(_background->GetTextureFile(3), Vec2(0.3f * visibleSize.width, 0.0f)));
 }
+
+void ShopBackgrounds::onEnter()
+{
+    MKScene::onEnter();
+}
