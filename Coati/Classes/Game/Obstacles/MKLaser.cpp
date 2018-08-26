@@ -108,6 +108,17 @@ void MKLaser::pause()
     // Pause Audio
     MKAudioManager::GetInstance()->PauseSound(m_LaserBeamChargingSoundID);
     MKAudioManager::GetInstance()->PauseSound(m_LaserBeamShootingSoundID);
+
+    // Pause Warning Spark
+    if (m_LaserWarningSparkLeft != nullptr)
+    {
+        m_LaserWarningSparkLeft->pause();
+    }
+
+    if (m_LaserWarningSparkRight != nullptr)
+    {
+        m_LaserWarningSparkRight->pause();
+    }
 }
 
 void MKLaser::resume()
@@ -117,6 +128,17 @@ void MKLaser::resume()
     // Resume Audio
     MKAudioManager::GetInstance()->ResumeSound(m_LaserBeamChargingSoundID);
     MKAudioManager::GetInstance()->ResumeSound(m_LaserBeamShootingSoundID);
+
+    // Resume Warning Spark
+    if (m_LaserWarningSparkLeft != nullptr)
+    {
+        m_LaserWarningSparkLeft->resume();
+    }
+
+    if (m_LaserWarningSparkRight != nullptr)
+    {
+        m_LaserWarningSparkRight->resume();
+    }
 }
 
 // Collision
