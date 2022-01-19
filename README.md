@@ -1,5 +1,8 @@
-# Coati
+# Never Stop Running
 Endless Runner Game By Lim Ngian Xin Terry. Codenamed Coati during development.  
+
+# Google Play Store
+https://play.google.com/store/apps/details?id=com.Terry.Coati  
 
 # Privacy Policy
 Okay, so like 4 years after adding this to the Google Play Store, I'm apparently required to have a privacy policy, so here it is.  
