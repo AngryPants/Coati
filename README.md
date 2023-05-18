@@ -1,5 +1,5 @@
 # Never Stop Running
-Endless Runner Game By Lim Ngian Xin Terry. Codenamed Coati during development.  
+Endless Runner Game By Lim Ngian Xin Terry. Placeholder name Coati during development.  
 
 # Google Play Store
 https://play.google.com/store/apps/details?id=com.Terry.Coati  
